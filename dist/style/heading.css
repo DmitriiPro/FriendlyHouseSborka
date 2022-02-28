@@ -1,0 +1,71 @@
+@font-face {
+	font-family: "Comfortaa";
+	src: local("Comfortaa"), local("Comfortaa-Regular"), url("../font/Comfortaa-Regular.woff2") format("woff2"),
+	url("../font/Comfortaa-Regular.woff") format("woff");
+	font-weight: 400;
+	font-display: swap;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Helvetica Neue Cyr-Light";
+	src: local("Helvetica Neue Cyr"), local("Helvetica Neue Cyr-Light"), url("../font/HelveticaNeueCyr-Light.woff2") format("woff2"),
+	url("../font/HelveticaNeueCyr-Light.woff") format("woff");
+	font-weight: 300;
+	font-display: swap;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Helvetica Neue Cyr-Medium";
+	src: local("Helvetica Neue Cyr"), local("Helvetica Neue Cyr-Medium"), url("../font/HelveticaNeueCyr-Medium.woff2") format("woff2"),
+	url("../font/HelveticaNeueCyr-Medium.woff") format("woff");
+	font-weight: 500;
+	font-display: swap;
+	font-style: normal;
+}
+
+.container-heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.heading__img {
+    display: flex; 
+    flex-direction: column; 
+    gap: 27px;
+    position: relative;
+}
+
+.heading__link {
+    font-family: "Helvetica Neue Cyr-Medium";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    color: var( --main-orange, #FF8A00);
+    text-align: end;
+    padding-right: 48px;
+}
+
+.heading__link:after {
+    content: url('../img/heading-strela-orange.svg');
+    position: absolute;
+    right: 0;
+}
+
+.heading__title {
+    font-family: "Comfortaa";
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: var( --main-color,#282626);
+}
+
+.heading__element {
+    font-family:'Helvetica Neue Cyr-light';
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 300;
+    width: 447px;
+}

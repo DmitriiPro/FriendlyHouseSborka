@@ -13,7 +13,7 @@ export const html = () => gulp
 	.pipe(browserSync.stream());
 
 export const style = () => gulp
-	.src('src/style/**/*.css')
+	.src('src/style/style.css')
 	.pipe(gulpCssimport({
 		extensions: ['css'],
 	}))

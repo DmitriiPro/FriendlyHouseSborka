@@ -5,6 +5,17 @@
     display: none;
 }
 
+.burger_position:before {
+    content: "";
+    background-image: url('../img/burger-delta.png');
+    background-repeat: no-repeat;
+    width: 52px;
+    height: 30px;
+    position: absolute;
+    top: -29px;
+    left: 1px;
+}
+
 .burger-wrapper {
     padding: 53px 40px 23px 20px;
 } 
@@ -28,7 +39,7 @@
 
 .burger-menu {
     position: absolute;
-    top: 70px;
+    top: 93px;
     left: 0;
     z-index: 60;
     

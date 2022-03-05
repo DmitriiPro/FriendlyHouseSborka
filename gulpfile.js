@@ -1,9 +1,13 @@
 import gulp from 'gulp';
 import browserSync from 'browser-sync';
-import cssImport from 'gulp-cssimport';
+import sassPkg from 'sass';
+import gulpSass from 'gulp-sass';
 import gulpCssimport from 'gulp-cssimport';
 import del from 'del';
 
+const prepros = false;
+
+const sass = gulpSass(sassPkg);
 
 //задачи
 
@@ -12,13 +16,22 @@ export const html = () => gulp
 	.pipe(gulp.dest('dist'))
 	.pipe(browserSync.stream());
 
-export const style = () => gulp
-	.src('src/style/style.css')
-	.pipe(gulpCssimport({
-		extensions: ['css'],
-	}))
-	.pipe(gulp.dest('dist/style'))
-	.pipe(browserSync.stream());gulp
+export const scss = () => {
+	if(prepros) {
+		return gulp
+			.src('src/scss/**/*.scss')
+			.pipe(sass().on('error', sass.logError))
+			.pipe(gulp.dest('dist/style'))
+			.pipe(browserSync.stream());
+	}
+	return gulp
+		.src('src/style/style.css')
+		.pipe(gulpCssimport({
+			extensions: ['css'],
+		}))
+		.pipe(gulp.dest('dist/style'))
+		.pipe(browserSync.stream());
+}
 
 export const js = () => gulp
 	.src('src/js/**/*.js')
@@ -48,7 +61,11 @@ export const server = () => {
 	})
 
 	gulp.watch('./src/**/*.html', html);
-	gulp.watch('./src/style/**/*.css', style);
+	gulp.watch(
+		prepros ? 
+		'./src/scss/**/*.scss' : 
+		'./src/style/**/*.css', 
+		scss);
 	gulp.watch('./src/js/**/*.js', js);
 	gulp.watch(['./src/img/**/*', './src/font/**/*'], copy);
 
@@ -58,7 +75,8 @@ export const clear = () => del('dist/**/*', {forse: true,});
 
 
 //запуск
-export const base = gulp.parallel(html, style, js, copy);
+
+export const base = gulp.parallel(html, scss, js, copy);
 
 export const build = gulp.series(clear, base);
 

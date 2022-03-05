@@ -35,7 +35,6 @@ img {
     height: auto;
 }
 
-
 button {
     padding: 0;
     cursor: pointer;
@@ -53,7 +52,8 @@ h3,
 ul,
 p,
 figure,
-fieldset {
+fieldset,
+figcaption {
     margin: 0;
 }
 

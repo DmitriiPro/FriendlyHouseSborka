@@ -1,5 +1,5 @@
 .sara {
-    padding: 15px 0 45px;
+    padding: 15px 0 90px;
     background: #FFFFFF;
 }
 
@@ -52,7 +52,7 @@
     height: 580px;
     position: absolute;
     top: 0;
-    right: 100px;
+    right: 0;
 }
 
 .wrapper-name-animals {
@@ -66,8 +66,10 @@
 
 .sara__block-btn {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     z-index: 10;
+    max-width: 180px;
+    height: 155px;
 }
 
 .sara__element {
@@ -85,8 +87,8 @@
     line-height: 22px;
     color: var(--main-orange, #FF8A00);
     text-transform: uppercase;
-    width: 180px;
-    height: 155px;
+    /* width: 180px;
+    height: 155px; */
     z-index: 9;
 }
 
@@ -152,6 +154,12 @@
 }
 
 /* ///////////////////////////////////////// */
+.form__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 34px;
+}
+
 .form-wrap {
     background:  var(--main-background, #E5E5E5);
     border-radius: 20px;
@@ -161,7 +169,7 @@
 }
 
 .form-wrapper {
-    height: 562px;
+    /* height: 562px; */
     text-align: center;
     padding: 50px 100px;
 }
@@ -229,10 +237,6 @@
     display: inline-block;
 }
 
-.form-field + .form-field {
-    margin-left: 14px;
-}
-
 .form-field__label {
     font-family: "Helvetica Neue Cyr-Light";
     font-style: normal;
@@ -262,7 +266,6 @@
     text-transform: uppercase;
     padding-top: 73px;
     color: var( --main-orange,#FF8A00);
-    margin-bottom: 5px;
 }
 
 .sara__btn-img {
@@ -270,15 +273,15 @@
     background-repeat: no-repeat;
     background-size: contain;
     width: 73px;
-    float: right;
-    margin-top: 40px;
+    transition: all 0.200s ease-in, color 0.200s ease-in;
 }
 
 /* состояния  */
 /* кнопка лапа */
 
 .sara__btn-lapa {
-    transition: all 0.200s ease-in, color 0.200s ease-in;
+    display: block;
+    text-align: end;
 }
 
 .sara__btn-lapa:hover {
@@ -351,4 +354,184 @@
 
 .sara__block-btn:active {
     filter: opacity(0.8);
+}
+
+/* адаптивы */
+@media(max-width: 1024px) {
+    .sara {
+        padding: 15px 0 70px 0;
+    }
+
+    .container-sara {
+        height: 450px;
+    }
+
+    .sara__title-orange {
+        font-size: 44px;
+        line-height: 54px;
+    }
+
+    .sara__title {
+        font-size: 30px;
+        line-height: 44px;
+        width: 300px;
+        height: 182px;
+    }
+
+    .wrapper-text {
+        gap: 13px;
+        align-self: center;
+    } 
+
+    .sara__block-btn {
+        width: 148px;
+        height: 126px;
+    }
+
+    .sara__btn {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .sara__button {
+        padding-top: 90px;
+        background-image: url(../img/lapa-1024.png);
+    }
+
+    .wrapper-dog::after {
+        width: 450px;
+        height: 450px;
+        right: 30px;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+@media(max-width: 768px) {
+    .sara {
+        padding: 15px 0 60px 0;
+    }
+
+    .container-sara {
+        height: 498px;
+    }
+
+    .wrapper-text {
+        padding-left: 0;
+        align-self: start;
+        margin-bottom: 0;
+        gap: 150px;
+    }
+
+    .sara__title-orange {
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    .sara__title {
+        font-size: 24px;
+        line-height: 30px;
+        width: unset;
+        height: unset;
+    }
+
+    .sara__button {
+        padding-top: 80px;
+        background-image: url(../img/lapa-768.png);
+    }
+
+    .sara__block-btn {
+        width: 145px;
+        height: 120px;
+        margin-left: 80px;
+    }
+
+    .wrapper-dog::after {
+        width: 420px;
+        height: 420px;
+        right: 0;
+        top: 51px;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+@media(max-width: 650px) {
+
+    .wrapper-dog::after {
+        background-position: right -66px bottom;
+        background-repeat: no-repeat;
+    }
+
+    .sara__title {
+        width: 326px;
+        text-align: center;
+    }
+}
+
+@media(max-width: 500px) {
+    .sara {
+        padding: 15px 0 40px 0;
+    }
+
+    .container-sara {
+        height: 536px;
+    }
+
+    .wrapper-text {
+        gap: 346px;
+        width: 100%;
+    }
+
+    .sara__title-orange {
+        font-size: 26px;
+        line-height: 44px;
+    }
+
+    .sara__title {
+        font-size: 18px;
+        line-height: 26px;
+        width: 270px;
+        align-self: center;
+    }
+
+    .sara__block-btn {
+        width: 84px;
+        height: 78px;
+        margin-left: 0;
+        align-self: center;
+    }
+
+    .sara__btn {
+        font-size: 8px;
+        line-height: 12px;
+    }
+
+    .sara__button {
+        padding-top: 55px;
+        background-image: url(../img/lapa-320.png);
+        background-position: center top;
+    }
+
+    .wrapper-dog::after {
+        width: 296px;
+        height: 330px;
+        right: 130px;
+        top: 82px;
+        background-position: top right -84px;
+    }
+}
+
+@media(max-width: 320px) {
+    .sara__title {
+        text-align: start;
+    }
+
+    .wrapper-dog::after {
+        width: 270px;
+        height: 266px;
+        right: 29px;
+        background-position: center;
+        background-size: cover;
+    }
 }

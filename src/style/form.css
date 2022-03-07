@@ -39,12 +39,12 @@
     background:  var(--main-background, #E5E5E5);
     border-radius: 20px;
     margin: 0 auto;
-    width: 780px;
+    max-width: 780px;
     height: 562px;
 }
 
 .form-wrapper {
-    height: 562px;
+    /* height: 562px; */
     text-align: center;
     padding: 50px 100px;
 }
@@ -112,10 +112,6 @@
     display: inline-block;
 }
 
-.form-field + .form-field {
-    margin-left: 14px;
-}
-
 .form-field__label {
     font-family: "Helvetica Neue Cyr-Light";
     font-style: normal;
@@ -127,7 +123,13 @@
     display: block;
 }
 
-.form-field__input {
+.form__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 34px;
+}
+
+.form__inp {
     width: 280px;
     height: 40px;
     background: #FFFFFF;
@@ -145,7 +147,6 @@
     text-transform: uppercase;
     padding-top: 73px;
     color: var( --main-orange,#FF8A00);
-    margin-bottom: 5px;
 }
 
 .form__btn_img {
@@ -153,15 +154,15 @@
     background-repeat: no-repeat;
     background-size: contain;
     width: 73px;
-    float: right;
-    margin-top: 40px;
+    transition: all 0.200s ease-in, color 0.200s ease-in;
 }
 
 /* состояния  */
 /* кнопка лапа */
 
 .form__btn-lapa {
-    transition: all 0.200s ease-in, color 0.200s ease-in;
+    display: block;
+    text-align: end;
 }
 
 .form__btn-lapa:hover {

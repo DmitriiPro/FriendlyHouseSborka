@@ -43,7 +43,8 @@
                                     <a href="#" class="burger__link">Наши питомцы</a>
                                 </li>
                                 <li class="burger__item">
-                                    <a href="#" class="burger__link">Контакты</a>
+                                    <a href="#" class="burger__link burger__link_contacts">Контакты</a>
+                                    <a href="tel:8(849)300-39-57" class="header__link header__link_double">8 (849) 300 - 39 -57</a>
                                 </li>
                             </ul>
                     </div>
@@ -118,16 +119,19 @@
                     <form  class="sara__form-input" action="#" id="my-form-two">
                         <h3 class="sara__subtitle">Или оставь свои контакты и мы сами свяжемся с тобой!</h3>
 
-                        <div class="form-field">
-                            <label class="form-field__label"  for="username-two">Номер телефона</label>
-                            <input class="form-field__input form-field__input-number" type="tel" name="tel" title="+7___-___-__-__" pattern="^\+?[7-8]-?[0-9]{3}-?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$" required id="username-two">
-                        </div>
-                        
-                        <div class="form-field">
-                            <label class="form-field__label" for="useremail-two">E-mail</label>
-                            <input class="form-field__input form-field__input-email" type="email" name="email" required id="useremail-two">
-                        </div>
+                        <div class="form__wrapper">
 
+                            <div class="form-field">
+                                <label class="form-field__label"  for="username-two">Номер телефона</label>
+                                <input class="form-field__input form-field__input-number" type="tel" name="tel" title="+7___-___-__-__" pattern="^\+?[7-8]-?[0-9]{3}-?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$" required id="username-two">
+                            </div>
+                            
+                            <div class="form-field">
+                                <label class="form-field__label" for="useremail-two">E-mail</label>
+                                <input class="form-field__input form-field__input-email" type="email" name="email" required id="useremail-two">
+                            </div>
+                            
+                        </div>
                         <div class="sara__btn-lapa">
                             <button class="sara__btn-modal sara__btn-img" type="submit">Отправить</button>
                         </div>
@@ -380,15 +384,20 @@
                     <form  class="form__form-input" action="#" id="my-form">
                         <h3 class="form__subtitle">Или оставь свои контакты и мы сами свяжемся с тобой!</h3>
 
-                        <div class="form-field">
-                            <label class="form-field__label"  for="username">Номер телефона</label>
-                            <input class="form-field__input-num form__inp" type="tel" name="tel" title="+7___-___-__-__" pattern="^\+?[7-8]-?[0-9]{3}-?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$" required id="username">
+                        <div class="form__wrapper">
+
+                            <div class="form-field">
+                                <label class="form-field__label"  for="username">Номер телефона</label>
+                                <input class="form-field__input-num form__inp" type="tel" name="tel" title="+7___-___-__-__" pattern="^\+?[7-8]-?[0-9]{3}-?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$" required id="username">
+                            </div>
+                            
+                            <div class="form-field">
+                                <label class="form-field__label" for="useremail">E-mail</label>
+                                <input class="form-field__input-mail form__inp" type="email" name="email" required id="useremail">
+                            </div>
+
                         </div>
-                        
-                        <div class="form-field">
-                            <label class="form-field__label" for="useremail">E-mail</label>
-                            <input class="form-field__input-mail form__inp" type="email" name="email" required id="useremail">
-                        </div>
+
                         <div class="form__btn-lapa">
                             <button class="form__btn form__btn_img" type="submit">Отправить</button>
                         </div>

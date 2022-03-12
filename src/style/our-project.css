@@ -126,6 +126,7 @@
 	line-height: 40px;
 	color: #FFFFFF;
 	max-width: 360px;
+	margin-bottom: 30px;
 }
 
 .news-dog__link {
@@ -133,9 +134,9 @@
 	font-style: normal;
 	font-weight: 500;
 	color: var(--main-orange);
-	margin-bottom: 15px;
+	margin-bottom: 70px;
 	text-align: end;
-	padding-right: 44px;
+	padding-right: 41px;
 	position: relative;
 }
 
@@ -143,11 +144,34 @@
 	content: "";
 	background-image: url(../img/our-project-orange-arrow.png);
 	width: 29px;
-	height: 29px;
+	height: 26px;
 	position: absolute;
 	top: 1px;
 	right: 0;
 }
+
+.news-dog__link-under {
+	font-family: "Helvetica Neue Cyr-Medium";
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	color: var(--main-orange);
+	position: relative;
+	padding-right: 36px;
+	text-align: end;
+	display: none;
+}
+
+.news-dog__link-under:after {
+	content: "";
+	background-image: url(../img/our-project-orange-arrow.png);
+	width: 29px;
+	height: 26px;
+	position: absolute;
+	top: -5px;
+	right: 0;
+}
+
 
 /* блок big-project */
 .big-project__title {
@@ -219,3 +243,5 @@
 .big-project__white-rabbit-12 {
 	background-image: url(../img/big-project-white-rabbit-12.jpg);
 }
+
+/* адаптивы */

@@ -11,21 +11,20 @@
 }
 .pets__list {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(12, auto);
   grid-template-rows: auto auto;
-  grid-template-areas: "one one two three" "four five six three";
+  grid-template-areas: "one one one one one two two two three three three three" "four four four five five five six six three three three three";
   row-gap: 44px;
+  column-gap: 20px;
 }
 .pets__item_one {
   grid-area: one;
 }
 .pets__item_two {
   grid-area: two;
-  position: relative;
 }
 .pets__item_three {
   grid-area: three;
-  justify-self: end;
 }
 .pets__item_four {
   grid-area: four;
@@ -35,7 +34,6 @@
 }
 .pets__item_six {
   grid-area: six;
-  justify-self: center;
 }
 .pets__figure-wrapper {
   display: grid;
@@ -45,9 +43,6 @@
 }
 .pets__figure_two {
   width: 280px;
-  position: absolute;
-  top: 0;
-  left: -90px;
 }
 .pets__figure_three {
   width: 380px;

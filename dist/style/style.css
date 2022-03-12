@@ -533,9 +533,17 @@ section {
 	font-style: normal;
 }
 
+.heading {
+    padding: 90px 0 34px 0;
+}
+
 .container-heading {
     display: flex;
     justify-content: space-between;
+}
+
+.heading__block {
+    max-width: 480px;
 }
 
 .heading__img {
@@ -543,6 +551,17 @@ section {
     flex-direction: column; 
     gap: 27px;
     position: relative;
+    width: 100%;
+    max-width: 580px;
+}
+
+.heading__img-dog {
+    background-image: url('../img/heading-dog.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 330px;
+    background-position: center;
+    background-size: cover;
 }
 
 .heading__link {
@@ -575,7 +594,106 @@ section {
     font-size: 20px;
     line-height: 30px;
     font-weight: 300;
-    width: 447px;
+}
+
+/* адаптивы */
+@media(max-width: 1024px) {
+    .heading {
+        padding: 70px 0 28px 0;
+    }
+
+    .heading__block {
+        max-width: 378px;
+    }
+
+    .heading__title {
+        font-size: 44px;
+        line-height: 54px;
+        margin-bottom: 20px;
+    }
+
+    .heading__element {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .heading__img {
+        max-width: 480px;
+        gap: 13px;
+    }
+
+    .heading__img-dog {
+        height: 308px;
+        background-position: right;
+    }
+
+    .heading__link {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+@media(max-width: 768px) {
+    .heading {
+        padding: 60px 0 21px 0;
+    }
+
+    .container-heading {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .heading__block {
+        max-width: 700px;
+    }
+
+    .heading__title {
+        font-size: 30px;
+        line-height: 34px;
+    } 
+
+    .heading__element {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .heading__img {
+        width: 100%;
+        max-width: 700px;
+        gap: 10px;
+    }
+
+    .heading__img-dog {
+        height: 450px;
+        background-position: right;
+    }
+}
+
+@media(max-width: 480px) {
+    .heading {
+        padding: 30px 0 11px 0;
+    }
+
+    .heading__title {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 10px;
+    }
+
+    .heading__element {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .heading__img {
+        max-width: 271px;
+    }
+
+    .heading__img-dog {
+        height: 174px;
+        background-position: center;
+    }
 }
 @font-face {
 	font-family: "Comfortaa";
@@ -840,12 +958,12 @@ section {
     background:  var(--main-background, #E5E5E5);
     border-radius: 20px;
     margin: 0 auto;
-    width: 780px;
+    max-width: 780px;
     height: 562px;
 }
 
 .form-wrapper {
-    height: 562px;
+    /* height: 562px; */
     text-align: center;
     padding: 50px 100px;
 }
@@ -913,10 +1031,6 @@ section {
     display: inline-block;
 }
 
-.form-field + .form-field {
-    margin-left: 14px;
-}
-
 .form-field__label {
     font-family: "Helvetica Neue Cyr-Light";
     font-style: normal;
@@ -928,7 +1042,13 @@ section {
     display: block;
 }
 
-.form-field__input {
+.form__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 34px;
+}
+
+.form__inp {
     width: 280px;
     height: 40px;
     background: #FFFFFF;
@@ -946,7 +1066,6 @@ section {
     text-transform: uppercase;
     padding-top: 73px;
     color: var( --main-orange,#FF8A00);
-    margin-bottom: 5px;
 }
 
 .form__btn_img {
@@ -954,15 +1073,15 @@ section {
     background-repeat: no-repeat;
     background-size: contain;
     width: 73px;
-    float: right;
-    margin-top: 40px;
+    transition: all 0.200s ease-in, color 0.200s ease-in;
 }
 
 /* состояния  */
 /* кнопка лапа */
 
 .form__btn-lapa {
-    transition: all 0.200s ease-in, color 0.200s ease-in;
+    display: block;
+    text-align: end;
 }
 
 .form__btn-lapa:hover {
@@ -1108,7 +1227,7 @@ section {
 }
 
 .sara {
-    padding: 15px 0 45px;
+    padding: 15px 0 90px;
     background: #FFFFFF;
 }
 
@@ -1161,7 +1280,7 @@ section {
     height: 580px;
     position: absolute;
     top: 0;
-    right: 100px;
+    right: 0;
 }
 
 .wrapper-name-animals {
@@ -1175,8 +1294,10 @@ section {
 
 .sara__block-btn {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     z-index: 10;
+    max-width: 180px;
+    height: 155px;
 }
 
 .sara__element {
@@ -1194,8 +1315,8 @@ section {
     line-height: 22px;
     color: var(--main-orange, #FF8A00);
     text-transform: uppercase;
-    width: 180px;
-    height: 155px;
+    /* width: 180px;
+    height: 155px; */
     z-index: 9;
 }
 
@@ -1261,6 +1382,12 @@ section {
 }
 
 /* ///////////////////////////////////////// */
+.form__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 34px;
+}
+
 .form-wrap {
     background:  var(--main-background, #E5E5E5);
     border-radius: 20px;
@@ -1270,7 +1397,7 @@ section {
 }
 
 .form-wrapper {
-    height: 562px;
+    /* height: 562px; */
     text-align: center;
     padding: 50px 100px;
 }
@@ -1338,10 +1465,6 @@ section {
     display: inline-block;
 }
 
-.form-field + .form-field {
-    margin-left: 14px;
-}
-
 .form-field__label {
     font-family: "Helvetica Neue Cyr-Light";
     font-style: normal;
@@ -1371,7 +1494,6 @@ section {
     text-transform: uppercase;
     padding-top: 73px;
     color: var( --main-orange,#FF8A00);
-    margin-bottom: 5px;
 }
 
 .sara__btn-img {
@@ -1379,15 +1501,15 @@ section {
     background-repeat: no-repeat;
     background-size: contain;
     width: 73px;
-    float: right;
-    margin-top: 40px;
+    transition: all 0.200s ease-in, color 0.200s ease-in;
 }
 
 /* состояния  */
 /* кнопка лапа */
 
 .sara__btn-lapa {
-    transition: all 0.200s ease-in, color 0.200s ease-in;
+    display: block;
+    text-align: end;
 }
 
 .sara__btn-lapa:hover {
@@ -1461,6 +1583,186 @@ section {
 .sara__block-btn:active {
     filter: opacity(0.8);
 }
+
+/* адаптивы */
+@media(max-width: 1024px) {
+    .sara {
+        padding: 15px 0 70px 0;
+    }
+
+    .container-sara {
+        height: 450px;
+    }
+
+    .sara__title-orange {
+        font-size: 44px;
+        line-height: 54px;
+    }
+
+    .sara__title {
+        font-size: 30px;
+        line-height: 44px;
+        width: 300px;
+        height: 182px;
+    }
+
+    .wrapper-text {
+        gap: 13px;
+        align-self: center;
+    } 
+
+    .sara__block-btn {
+        width: 148px;
+        height: 126px;
+    }
+
+    .sara__btn {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .sara__button {
+        padding-top: 90px;
+        background-image: url(../img/lapa-1024.png);
+    }
+
+    .wrapper-dog::after {
+        width: 450px;
+        height: 450px;
+        right: 30px;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+@media(max-width: 768px) {
+    .sara {
+        padding: 15px 0 60px 0;
+    }
+
+    .container-sara {
+        height: 498px;
+    }
+
+    .wrapper-text {
+        padding-left: 0;
+        align-self: start;
+        margin-bottom: 0;
+        gap: 150px;
+    }
+
+    .sara__title-orange {
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    .sara__title {
+        font-size: 24px;
+        line-height: 30px;
+        width: unset;
+        height: unset;
+    }
+
+    .sara__button {
+        padding-top: 80px;
+        background-image: url(../img/lapa-768.png);
+    }
+
+    .sara__block-btn {
+        width: 145px;
+        height: 120px;
+        margin-left: 80px;
+    }
+
+    .wrapper-dog::after {
+        width: 420px;
+        height: 420px;
+        right: 0;
+        top: 51px;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+@media(max-width: 650px) {
+
+    .wrapper-dog::after {
+        background-position: right -66px bottom;
+        background-repeat: no-repeat;
+    }
+
+    .sara__title {
+        width: 326px;
+        text-align: center;
+    }
+}
+
+@media(max-width: 500px) {
+    .sara {
+        padding: 15px 0 40px 0;
+    }
+
+    .container-sara {
+        height: 536px;
+    }
+
+    .wrapper-text {
+        gap: 346px;
+        width: 100%;
+    }
+
+    .sara__title-orange {
+        font-size: 26px;
+        line-height: 44px;
+    }
+
+    .sara__title {
+        font-size: 18px;
+        line-height: 26px;
+        width: 270px;
+        align-self: center;
+    }
+
+    .sara__block-btn {
+        width: 84px;
+        height: 78px;
+        margin-left: 0;
+        align-self: center;
+    }
+
+    .sara__btn {
+        font-size: 8px;
+        line-height: 12px;
+    }
+
+    .sara__button {
+        padding-top: 55px;
+        background-image: url(../img/lapa-320.png);
+        background-position: center top;
+    }
+
+    .wrapper-dog::after {
+        width: 296px;
+        height: 330px;
+        right: 130px;
+        top: 82px;
+        background-position: top right -84px;
+    }
+}
+
+@media(max-width: 320px) {
+    .sara__title {
+        text-align: start;
+    }
+
+    .wrapper-dog::after {
+        width: 270px;
+        height: 266px;
+        right: 29px;
+        background-position: center;
+        background-size: cover;
+    }
+}
 .burger {
     width: 394px;
     border-bottom: 10px solid var(--main-orange, #FF8A00);
@@ -1508,6 +1810,10 @@ section {
     
 }
 
+.header__link_double {
+    display: none;
+}
+
 /* состояния */
 .burger__link:hover {
     text-decoration: underline;
@@ -1520,6 +1826,78 @@ section {
 .burger__link {
     transition: all 0.200ms ease-in;
 } 
+
+/* адаптивы */
+@media(max-width: 1024px) {
+    .burger {
+        width: 349px;
+    }
+
+    .burger-wrapper {
+        padding: 27px 20px 17px 20px;
+    }
+
+    .burger__link {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .burger__item:not(:last-child) {
+        border-bottom: 1px solid var(--main-orange, #FF8A00);
+    }
+
+    .burger__item {
+        padding: 13px 0 13px 0;
+    }
+}
+
+@media(max-width: 768px) {
+    .burger-wrapper {
+        padding: 27px 20px 31px 20px;
+    }
+
+    .header__link_double {
+        display: block;
+        margin-top: 30px;
+        margin-left: 19px;
+    }
+}
+
+@media(max-width: 480px) {
+    .burger {
+        width: 285px;
+    }
+
+    .burger_position:before {
+        width: 0;
+        height: 0;
+    }
+
+    .burger-menu {
+        top: 46px;
+    }
+
+    .burger-wrapper {
+        padding: 5px 0 15px 0;
+    }
+
+    .burger__link {
+        font-size: 14px;
+        line-height: 20px;
+        padding-left: 10px;
+    }
+
+    .header__link_double {
+        font-size: 14px;
+        line-height: 20px;
+        padding-left: 31px;
+    }
+
+    .header__link_double {
+        margin-top: 18px;
+        margin-left: 10px;
+    }
+}
 .our-project {
 	padding: 90px 0;
 	background-color: #FFFFFF
@@ -1648,6 +2026,7 @@ section {
 	line-height: 40px;
 	color: #FFFFFF;
 	max-width: 360px;
+	margin-bottom: 30px;
 }
 
 .news-dog__link {
@@ -1655,9 +2034,9 @@ section {
 	font-style: normal;
 	font-weight: 500;
 	color: var(--main-orange);
-	margin-bottom: 15px;
+	margin-bottom: 70px;
 	text-align: end;
-	padding-right: 44px;
+	padding-right: 41px;
 	position: relative;
 }
 
@@ -1665,11 +2044,34 @@ section {
 	content: "";
 	background-image: url(../img/our-project-orange-arrow.png);
 	width: 29px;
-	height: 29px;
+	height: 26px;
 	position: absolute;
 	top: 1px;
 	right: 0;
 }
+
+.news-dog__link-under {
+	font-family: "Helvetica Neue Cyr-Medium";
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	color: var(--main-orange);
+	position: relative;
+	padding-right: 36px;
+	text-align: end;
+	display: none;
+}
+
+.news-dog__link-under:after {
+	content: "";
+	background-image: url(../img/our-project-orange-arrow.png);
+	width: 29px;
+	height: 26px;
+	position: absolute;
+	top: -5px;
+	right: 0;
+}
+
 
 /* блок big-project */
 .big-project__title {
@@ -1742,6 +2144,7 @@ section {
 	background-image: url(../img/big-project-white-rabbit-12.jpg);
 }
 
+/* адаптивы */
 .pets {
   padding: 90px 0 45px 0;
   background-color: #ffffff;
@@ -1755,21 +2158,20 @@ section {
 }
 .pets__list {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(12, auto);
   grid-template-rows: auto auto;
-  grid-template-areas: "one one two three" "four five six three";
+  grid-template-areas: "one one one one one two two two three three three three" "four four four five five five six six three three three three";
   row-gap: 44px;
+  column-gap: 20px;
 }
 .pets__item_one {
   grid-area: one;
 }
 .pets__item_two {
   grid-area: two;
-  position: relative;
 }
 .pets__item_three {
   grid-area: three;
-  justify-self: end;
 }
 .pets__item_four {
   grid-area: four;
@@ -1779,7 +2181,6 @@ section {
 }
 .pets__item_six {
   grid-area: six;
-  justify-self: center;
 }
 .pets__figure-wrapper {
   display: grid;
@@ -1789,9 +2190,6 @@ section {
 }
 .pets__figure_two {
   width: 280px;
-  position: absolute;
-  top: 0;
-  left: -90px;
 }
 .pets__figure_three {
   width: 380px;

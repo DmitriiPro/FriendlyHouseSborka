@@ -5,7 +5,7 @@ import gulpSass from 'gulp-sass';
 import gulpCssimport from 'gulp-cssimport';
 import del from 'del';
 
-const prepros = false;
+const prepros = true;
 
 const sass = gulpSass(sassPkg);
 
@@ -21,15 +21,15 @@ export const scss = () => {
 		return gulp
 			.src('src/scss/**/*.scss')
 			.pipe(sass().on('error', sass.logError))
-			.pipe(gulp.dest('dist/style'))
+			.pipe(gulp.dest('dist/css'))
 			.pipe(browserSync.stream());
 	}
 	return gulp
-		.src('src/style/style.css')
+		.src('src/css/index.css')
 		.pipe(gulpCssimport({
 			extensions: ['css'],
 		}))
-		.pipe(gulp.dest('dist/style'))
+		.pipe(gulp.dest('dist/css'))
 		.pipe(browserSync.stream());
 }
 
@@ -64,7 +64,7 @@ export const server = () => {
 	gulp.watch(
 		prepros ? 
 		'./src/scss/**/*.scss' : 
-		'./src/style/**/*.css', 
+		'./src/css/**/*.css', 
 		scss);
 	gulp.watch('./src/js/**/*.js', js);
 	gulp.watch(['./src/img/**/*', './src/font/**/*'], copy);

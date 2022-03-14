@@ -1,0 +1,25 @@
+
+$main-color: #282626;
+$main-background: #f2f0f1;
+$main-orange: #FF8A00;
+
+// @mixin font($name, $weight) {
+// 	font: {
+// 		family: $name;
+// 		weight: $weight;
+// 		display: swap;
+// 		style: normal;
+// 	}
+// 	src: url("../font/#{ $name }-#{ $weight }.woff2") format("woff2"),
+// 	url("../font/#{ $name }-#{ $weight }.woff") format("woff"),
+// }
+
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
+	@font-face {
+		font-family: $font-family;
+		font-weight: $weight;
+		font-style: $style;
+		src: url('#{$file-path}.woff');
+	}
+}
+

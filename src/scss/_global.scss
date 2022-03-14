@@ -1,0 +1,102 @@
+// @font-face {
+// 	@include font("Helvetica Neue Cyr-Light", 300)
+
+// 	// font-family: "Helvetica Neue Cyr-Light";
+// 	// src: local("Helvetica Neue Cyr"), local("Helvetica Neue Cyr-Light"), url("../font/HelveticaNeueCyr-Light.woff2") format("woff2"), url("../font/HelveticaNeueCyr-Light.woff") format("woff");
+// 	// font-weight: 300;
+// 	// font-display: swap;
+// 	// font-style: normal;
+// }
+html {
+	position: relative;
+	box-sizing: border-box;
+}
+* {
+	box-sizing: inherit;
+	&::before {
+		box-sizing: inherit;
+	}
+	&::after {
+		box-sizing: inherit;
+	}
+}
+body {
+	min-width: 320px;
+	min-height: 100vh;
+	font-family: "Helvetica Neue Cyr-Light", sans-serif;
+	font-size: 20px;
+	line-height: 30px;
+	font-weight: 300;
+	font-style: normal;
+	color: $main-color;
+	background-color: $main-background;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+button {
+	padding: 0;
+	cursor: pointer;
+}
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	margin: 0;
+}
+h1 {
+	margin: 0;
+}
+h2 {
+	margin: 0;
+}
+h3 {
+	margin: 0;
+}
+p {
+	margin: 0;
+}
+figure {
+	margin: 0;
+}
+fieldset {
+	margin: 0;
+}
+figcaption {
+	margin: 0;
+}
+iframe {
+	border: none;
+}
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0 !important;
+	border: 0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+form {
+	margin: 0;
+	padding: 0;
+}
+.container {
+	max-width: 1240px;
+	padding: 0 30px;
+	margin: 0 auto;
+}
+section {
+	padding: 45px 0;
+}
+@media (max-width: 768px) {
+	.container {
+		padding: 0 15px;
+	}
+}

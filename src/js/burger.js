@@ -16,4 +16,4 @@ const burger = () => {
 
 };
 
-export {burger}
+burger();

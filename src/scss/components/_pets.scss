@@ -48,10 +48,6 @@
 		}
 	}
 
-	&__figure-wrapper {
-		display: grid;
-	}
-
 	&__figure {
 		
 		&_one {
@@ -79,9 +75,5 @@
 		padding-top: 10px;
 		font-size: 20px;
 		line-height: 26px;
-
-		&_six {
-			padding-top: 20px;
-		}
 	}
 }

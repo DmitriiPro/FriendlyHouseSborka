@@ -60,4 +60,4 @@ const sara = () => {
 
 }
 
-export  {sara}
+sara();

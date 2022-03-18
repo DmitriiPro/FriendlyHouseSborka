@@ -37,4 +37,4 @@ const form = () => {
 
 };
 
-export  {form}
+form();

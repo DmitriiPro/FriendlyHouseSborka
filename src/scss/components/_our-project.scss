@@ -58,7 +58,17 @@
 	position: relative;
 	&:after {
 		content: "";
-		background-image: url(../img/our-project-orange-arrow.png);
+		background-image: url("../img/our-project-orange-arrow.png");
+		background-image: -webkit-image-set(
+			url("../img/our-project-orange-arrow.avif") 1x,
+			url("../img/our-project-orange-arrow.webp") 1x,
+			url("../img/our-project-orange-arrow.png") 1x
+		);
+		background-image: image-set(
+			url("../img/our-project-orange-arrow.avif") 1x,
+			url("../img/our-project-orange-arrow.webp") 1x,
+			url("../img/our-project-orange-arrow.png") 1x
+		);
 		width: 29px;
 		height: 29px;
 		position: absolute;
@@ -71,19 +81,69 @@
 	height: 180px;
 }
 .our-project__blue-dog {
-	background-image: url(../img/our-dog-home-blue.jpg);
+	background-image: url("../img/our-dog-home-blue.jpg");
+	background-image: -webkit-image-set(
+		url('../img/our-dog-home-blue.avif') 1x,
+		url('../img/our-dog-home-blue.webp') 1x,
+		url('../img/our-dog-home-blue.png') 1x
+	);
+	background-image: image-set(
+		url('../img/our-dog-home-blue.avif') 1x,
+		url('../img/our-dog-home-blue.webp') 1x,
+		url('../img/our-dog-home-blue.png') 1x
+	);
 }
 .our-project__orange-dog {
-	background-image: url(../img/our-dog-orange-kurtka.jpg);
+	background-image: url("../img/our-dog-orange-kurtka.jpg");
+	background-image: -webkit-image-set(
+		url('../img/our-dog-orange-kurtka.avif') 1x,
+		url('../img/our-dog-orange-kurtka.webp') 1x,
+		url('../img/our-dog-orange-kurtka.png') 1x
+	);
+	background-image: image-set(
+		url('../img/our-dog-orange-kurtka.avif') 1x,
+		url('../img/our-dog-orange-kurtka.webp') 1x,
+		url('../img/our-dog-orange-kurtka.png') 1x
+	);
 }
 .our-project__dog-girl {
-	background-image: url(../img/our-dog-girl.jpg);
+	background-image: url("../img/our-dog-girl.jpg");
+	background-image: -webkit-image-set(
+		url('../img/our-dog-girl.avif') 1x,
+		url('../img/our-dog-girl.webp') 1x,
+		url('../img/our-dog-girl.png') 1x
+	);
+	background-image: image-set(
+		url('../img/our-dog-girl.avif') 1x,
+		url('../img/our-dog-girl.webp') 1x,
+		url('../img/our-dog-girl.png') 1x
+	);
 }
 .our-project__dog-brown {
-	background-image: url(../img/our-dog-brown.jpg);
+	background-image: url("../img/our-dog-brown.jpg");
+	background-image: -webkit-image-set(
+		url('../img/our-dog-brown.avif') 1x,
+		url('../img/our-dog-brown.webp') 1x,
+		url('../img/our-dog-brown.png') 1x
+	);
+	background-image: image-set(
+		url('../img/our-dog-brown.avif') 1x,
+		url('../img/our-dog-brown.webp') 1x,
+		url('../img/our-dog-brown.png') 1x
+	);
 }
 .news-dog__block-img {
-	background-image: url(../img/news-dog-dogs.jpg);
+	background-image: url("../img/news-dog-dogs.jpg");
+	background-image: -webkit-image-set(
+		url("../img/news-dog-dogs.avif") 1x,
+		url("../img/news-dog-dogs.webp") 1x,
+		url("../img/news-dog-dogs.jpg") 1x
+	);
+	background-image: image-set(
+		url("../img/news-dog-dogs.avif") 1x,
+		url("../img/news-dog-dogs.webp") 1x,
+		url("../img/news-dog-dogs.jpg") 1x
+	);
 	background-repeat: no-repeat;
 	max-width: 380px;
 	height: 450px;
@@ -116,7 +176,17 @@
 	position: relative;
 	&:after {
 		content: "";
-		background-image: url(../img/our-project-orange-arrow.png);
+		background-image: url("../img/our-project-orange-arrow.png");
+		background-image: -webkit-image-set(
+			url("../img/our-project-orange-arrow.avif") 1x,
+			url("../img/our-project-orange-arrow.webp") 1x,
+			url("../img/our-project-orange-arrow.png") 1x
+		);
+		background-image: image-set(
+			url("../img/our-project-orange-arrow.avif") 1x,
+			url("../img/our-project-orange-arrow.webp") 1x,
+			url("../img/our-project-orange-arrow.png") 1x
+		);
 		width: 29px;
 		height: 26px;
 		position: absolute;
@@ -136,7 +206,17 @@
 	display: none;
 	&:after {
 		content: "";
-		background-image: url(../img/our-project-orange-arrow.png);
+		background-image: url("../img/our-project-orange-arrow.png");
+		background-image: -webkit-image-set(
+			url("../img/our-project-orange-arrow.avif") 1x,
+			url("../img/our-project-orange-arrow.webp") 1x,
+			url("../img/our-project-orange-arrow.png") 1x
+		);
+		background-image: image-set(
+			url("../img/our-project-orange-arrow.avif") 1x,
+			url("../img/our-project-orange-arrow.webp") 1x,
+			url("../img/our-project-orange-arrow.png") 1x
+		);
 		width: 29px;
 		height: 26px;
 		position: absolute;
@@ -163,38 +243,158 @@
 	height: 70px;
 }
 .big-project__dog-orange-1 {
-	background-image: url(../img/big-project-dog-orange-1.jpg);
+	background-image: url("../img/big-project-dog-orange-1.jpg");
+	background-image: -webkit-image-set(
+		url("../img/big-project-dog-orange-1.avif") 1x,
+		url("../img/big-project-dog-orange-1.webp") 1x,
+		url("../img/big-project-dog-orange-1.jpg") 1x
+	);
+	background-image: image-set(
+		url("../img/big-project-dog-orange-1.avif") 1x,
+		url("../img/big-project-dog-orange-1.webp") 1x,
+		url("../img/big-project-dog-orange-1.jpg") 1x
+	);
 }
 .big-project__mops-2 {
-	background-image: url(../img/big-project-mops-2.jpg);
+	background-image: url("../img/big-project-mops-2.jpg");
+	background-image: -webkit-image-set(
+		url("../img/big-project-mops-2.avif") 1x,
+		url("../img/big-project-mops-2.webp") 1x,
+		url("../img/big-project-mops-2.jpg") 1x
+	);
+	background-image: image-set(
+		url("../img/big-project-mops-2.avif") 1x,
+		url("../img/big-project-mops-2.webp") 1x,
+		url("../img/big-project-mops-2.jpg") 1x
+	);
 }
 .big-project__rabbit-3 {
-	background-image: url(../img/big-project-rabbit-3.jpg);
+	background-image: url("../img/big-project-rabbit-3.jpg");
+	background-image: -webkit-image-set(
+		url("../img/big-project-rabbit-3.avif") 1x,
+		url("../img/big-project-rabbit-3.webp") 1x,
+		url("../img/big-project-rabbit-3.jpg") 1x
+	);
+	background-image: image-set(
+		url("../img/big-project-rabbit-3.avif") 1x,
+		url("../img/big-project-rabbit-3.webp") 1x,
+		url("../img/big-project-rabbit-3.jpg") 1x
+	);
 }
 .big-project__malamut-4 {
-	background-image: url(../img/big-project-malamut-4.jpg);
+	background-image: url("../img/big-project-malamut-4.jpg");
+	background-image: -webkit-image-set(
+		url("../img/big-project-malamut-4.avif") 1x,
+		url("../img/big-project-malamut-4.webp") 1x,
+		url("../img/big-project-malamut-4.jpg") 1x
+	);
+	background-image: image-set(
+		url("../img/big-project-malamut-4.avif") 1x,
+		url("../img/big-project-malamut-4.webp") 1x,
+		url("../img/big-project-malamut-4.jpg") 1x
+	);
 }
 .big-project__dog-brown-5 {
-	background-image: url(../img/big-project-dog-brown-5.jpg);
+	background-image: url("../img/big-project-dog-brown-5.jpg");
+	background-image: -webkit-image-set(
+		url("../img/big-project-dog-brown-5.avif") 1x,
+		url("../img/big-project-dog-brown-5.webp") 1x,
+		url("../img/big-project-dog-brown-5.jpg") 1x
+	);
+	background-image: image-set(
+		url("../img/big-project-dog-brown-5.avif") 1x,
+		url("../img/big-project-dog-brown-5.webp") 1x,
+		url("../img/big-project-dog-brown-5.jpg") 1x
+	);
 }
 .big-project__popugay-blue-6 {
-	background-image: url(../img/big-project-popugay-blue-6.jpg);
+	background-image: url("../img/big-project-popugay-blue-6.jpg");
+	background-image: -webkit-image-set(
+		url("../img/big-project-popugay-blue-6.avif") 1x,
+		url("../img/big-project-popugay-blue-6.webp") 1x,
+		url("../img/big-project-popugay-blue-6.jpg") 1x
+	);
+	background-image: image-set(
+		url("../img/big-project-popugay-blue-6.avif") 1x,
+		url("../img/big-project-popugay-blue-6.webp") 1x,
+		url("../img/big-project-popugay-blue-6.jpg") 1x
+	);
 }
 .big-project__children-dog-7 {
-	background-image: url(../img/big-project-children-dog-7.jpg);
+	background-image: url("../img/big-project-children-dog-7.jpg");
+	background-image: -webkit-image-set(
+		url("../img/big-project-children-dog-7.avif") 1x,
+		url("../img/big-project-children-dog-7.webp") 1x,
+		url("../img/big-project-children-dog-7.jpg") 1x
+	);
+	background-image: image-set(
+		url("../img/big-project-children-dog-7.avif") 1x,
+		url("../img/big-project-children-dog-7.webp") 1x,
+		url("../img/big-project-children-dog-7.jpg") 1x
+	);
 }
 .big-project__kakadu-8 {
-	background-image: url(../img/big-project-kakadu-8.jpg);
+	background-image: url("../img/big-project-kakadu-8.jpg");
+	background-image: -webkit-image-set(
+		url("../img/big-project-kakadu-8.avif") 1x,
+		url("../img/big-project-kakadu-8.webp") 1x,
+		url("../img/big-project-kakadu-8.jpg") 1x
+	);
+	background-image: image-set(
+		url("../img/big-project-kakadu-8.avif") 1x,
+		url("../img/big-project-kakadu-8.webp") 1x,
+		url("../img/big-project-kakadu-8.jpg") 1x
+	);
 }
 .big-project__yellow-parrot-9 {
-	background-image: url(../img/big-project-yellow-parrot-9.jpg);
+	background-image: url("../img/big-project-yellow-parrot-9.jpg");
+	background-image: -webkit-image-set(
+		url("../img/big-project-yellow-parrot-9.avif") 1x,
+		url("../img/big-project-yellow-parrot-9.webp") 1x,
+		url("../img/big-project-yellow-parrot-9.jpg") 1x
+	);
+	background-image: image-set(
+		url("../img/big-project-yellow-parrot-9.avif") 1x,
+		url("../img/big-project-yellow-parrot-9.webp") 1x,
+		url("../img/big-project-yellow-parrot-9.jpg") 1x
+	);
 }
 .big-project__jeans-dog-10 {
-	background-image: url(../img/big-project-jeans-dog-10.jpg);
+	background-image: url("../img/big-project-jeans-dog-10.jpg");
+	background-image: -webkit-image-set(
+		url("../img/big-project-jeans-dog-10.avif") 1x,
+		url("../img/big-project-jeans-dog-10.webp") 1x,
+		url("../img/big-project-jeans-dog-10.jpg") 1x
+	);
+	background-image: image-set(
+		url("../img/big-project-jeans-dog-10.avif") 1x,
+		url("../img/big-project-jeans-dog-10.webp") 1x,
+		url("../img/big-project-jeans-dog-10.jpg") 1x
+	);
 }
 .big-project__doghat-girl-11 {
-	background-image: url(../img/big-project-doghat-girl-11.jpg);
+	background-image: url("../img/big-project-doghat-girl-11.jpg");
+	background-image: -webkit-image-set(
+		url("../img/big-project-doghat-girl-11.avif") 1x,
+		url("../img/big-project-doghat-girl-11.webp") 1x,
+		url("../img/big-project-doghat-girl-11.jpg") 1x
+	);
+	background-image: image-set(
+		url("../img/big-project-doghat-girl-11.avif") 1x,
+		url("../img/big-project-doghat-girl-11.webp") 1x,
+		url("../img/big-project-doghat-girl-11.jpg") 1x
+	);
 }
 .big-project__white-rabbit-12 {
-	background-image: url(../img/big-project-white-rabbit-12.jpg);
+	background-image: url("../img/big-project-white-rabbit-12.jpg");
+	background-image: -webkit-image-set(
+		url("../img/big-project-white-rabbit-12.avif") 1x,
+		url("../img/big-project-white-rabbit-12.webp") 1x,
+		url("../img/big-project-white-rabbit-12.jpg") 1x
+	);
+	background-image: image-set(
+		url("../img/big-project-white-rabbit-12.avif") 1x,
+		url("../img/big-project-white-rabbit-12.webp") 1x,
+		url("../img/big-project-white-rabbit-12.jpg") 1x
+	);
 }

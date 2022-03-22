@@ -12,8 +12,12 @@ import soursemaps from 'gulp-sourcemaps';
 import gulpImg from 'gulp-image';
 import gulpWebp from 'gulp-webp';
 import gulpAvif from 'gulp-avif';
+import { stream as critical } from 'critical';
+import gulpif from 'gulp-if';
 
 const prepros = true;
+
+let dev = false;
 
 const sass = gulpSass(sassPkg);
 
@@ -37,20 +41,20 @@ export const scss = () => {
 	if(prepros) {
 		return gulp
 			.src('src/scss/**/*.scss')
-			.pipe(soursemaps.init())
+			.pipe(gulpif(dev, soursemaps.init()))
 			.pipe(sass().on('error', sass.logError))
 			.pipe(cleanCSS({
 				2: {
 					specialComments: 0,
 				}
 			}))
-			.pipe(soursemaps.write('../maps'))
+			.pipe(gulpif(dev, soursemaps.write('../maps')))
 			.pipe(gulp.dest('dist/css'))
 			.pipe(browserSync.stream());
 	}
 	return gulp
 		.src('src/css/index.css')
-		.pipe(soursemaps.init())
+		.pipe(gulpif(dev, soursemaps.init()))
 		.pipe(gulpCssimport({
 			extensions: ['css'],
 		}))
@@ -59,23 +63,23 @@ export const scss = () => {
 				specialComments: 0,
 			}
 		}))
-		.pipe(soursemaps.write('../maps'))
+		.pipe(gulpif(dev, soursemaps.write('../maps')))
 		.pipe(gulp.dest('dist/css'))
 		.pipe(browserSync.stream());
 }
 
 export const js = () => gulp
 	.src([...allJS, 'src/js/**/*.js'])
-	.pipe(soursemaps.init())
+	.pipe(gulpif(dev, soursemaps.init()))
 	.pipe(terser())
 	.pipe(concat('index.min.js'))
-	.pipe(soursemaps.write('../maps'))
+	.pipe(gulpif(dev, soursemaps.write('../maps')))
 	.pipe(gulp.dest('dist/js'))
 	.pipe(browserSync.stream());
 
 export const img = () => gulp
 	.src('src/img/**/*.{jpg,jpeg,png,svg,gif}')
-	.pipe(gulpImg({
+	.pipe(gulpif(!dev, gulpImg({
 		optipng: ['-i 1', '-strip all', '-fix', '-o7', '-force'],
 		pngquant: ['--speed=1', '--force', 256],
 		zopflipng: ['-y', '--lossy_8bit', '--lossy_transparent'],
@@ -83,9 +87,11 @@ export const img = () => gulp
 		mozjpeg: ['-optimize', '-progressive'],
 		gifsicle: ['--optimize'],
 		svgo: true,
-	}))
+	})))
 	.pipe(gulp.dest('dist/img'))
-	.pipe(browserSync.stream());
+	.pipe(browserSync.stream({
+		once: true
+	}));
 
 export const webp = () => gulp
 	.src('src/img/**/*.{jpg,jpeg,png}')
@@ -93,7 +99,9 @@ export const webp = () => gulp
 		quality: 70
 	}))
 	.pipe(gulp.dest('dist/img'))
-	.pipe(browserSync.stream());
+	.pipe(browserSync.stream({
+		once: true
+	}));
 
 export const avif = () => gulp
 	.src('src/img/**/*.{jpg,jpeg,png}')
@@ -101,7 +109,21 @@ export const avif = () => gulp
 		quality: 70
 	}))
 	.pipe(gulp.dest('dist/img'))
-	.pipe(browserSync.stream());
+	.pipe(browserSync.stream({
+		once: true
+	}));
+
+export const critCSS = () => gulp
+	.src('dist/*.html')
+	.pipe(critical({
+		base: 'dist/',
+		inline: true,
+		css: ['dist/css/index.css']
+	}))
+	.on('error', err => {
+		console.error(err.message)
+	})
+	.pipe(gulp.dest('dist'))
 
 export const copy = () => gulp
 	.src('src/font/**/*', {
@@ -140,9 +162,12 @@ export const clear = () => del('dist/**/*', {forse: true,});
 
 
 //запуск
+export const develop = async() => {
+	dev = true;
+}
 
 export const base = gulp.parallel(html, scss, js, img, avif, webp, copy);
 
-export const build = gulp.series(clear, base);
+export const build = gulp.series(clear, base, critCSS)
 
-export default gulp.series(base, server);
+export default gulp.series(develop, base, server);

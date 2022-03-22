@@ -12,12 +12,20 @@
     <link rel="preload" href="font/HelveticaNeueCyr-Roman.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="font/HelveticaNeueCyr-Medium.woff2" as="font" type="font/woff2" crossorigin>
 
-    <link rel="stylesheet" href="css/index.css">
-    
-    <!-- <script defer src="libs/jquery-3.6.0.min.js"></script>
-    <script defer src="libs/swiper-bundle.min.js"></script> -->
-
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const createLink = url => {
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = url;
+                document.head.append(link);
+            };
+            createLink('css/index.css');
+        })
+    </script>
+    <!-- <link rel="stylesheet" href="css/index.css"> -->
     <script defer src="js/index.min.js"></script>
+
 </head>
 <body class="body">
     
@@ -26,10 +34,10 @@
             <nav class="header__nav">
                 <div class="header__button">
                     <button class="header__menu burg-btn">
-                        <img src="img/header-menu-btn.svg" alt="три полоски" class="header__menu-img">
+                        <img src="img/header-menu-btn.svg" alt="три полоски" class="header__menu-img" width="40" height="21">
                     </button>
                 </div>
-                <img src="img/header-logo-friendly.png" alt="friendly house" class="header__logo">
+                <img src="img/header-logo-friendly.png" alt="friendly house" class="header__logo" width="356" height="72">
                 <a href="tel:8(849)300-39-57" class="header__link">8 (849) 300 - 39 -57</a>
 
                 <!-- верстка бургер меню -->
@@ -79,25 +87,25 @@
                     <ul class="sara__list">
                         <li class="sara__item boris">
                             <button class="btn-animals">
-                                <img src="img/cat-boris.png" alt="" class="boris">
+                                <img src="img/cat-boris.png" alt="кот" class="boris" width="80" height="80">
                                 <span class="sara__element">Борис</span>
                             </button>
                         </li>
                         <li class="sara__item lui">
                             <button class="btn-animals">
-                                <img src="img/dog-lui.png" alt="" class="lui">
+                                <img src="img/dog-lui.png" alt="собака" class="lui" width="80" height="80">
                                 <span class="sara__element">Луи</span>
                             </button>
                         </li>
                         <li class="sara__item piter">
                             <button class="btn-animals">
-                                <img src="img/rabbit-piter.png" alt="" class="piter">
+                                <img src="img/rabbit-piter.png" alt="кролик" class="piter" width="80" height="80">
                                 <span class="sara__element">Питер</span>
                             </button>
                         </li>
                         <li class="sara__item kenny">
                             <button class="btn-animals">
-                                <img src="img/cat-kenny.png" alt="" class="kenny">
+                                <img src="img/cat-kenny.png" alt="рыжий кот" class="kenny" width="80" height="80">
                                 <span class="sara__element">Кенни</span>
                             </button>
                         </li>
@@ -285,14 +293,14 @@
                             <p class="help__element help__element_finance">Мы будем рады любым пожертвованиям. Деньги пойдут на корм, лечение и уход, а также, на обустройство территории, где обитают наши маленькие питомцы.</p>
                         </div>
                         <div class="block-one">
-                            <img src="img/rabbit-dog.png" alt="собаки" class="help-img-one" width="580" height="298">
+                            <img src="img/rabbit-dog.png" alt="собаки" class="help-img-one" width="580" height="298" loading="lazy">
                         </div>
                     </li>
 
                     <li class="help__item item-block-two item-li">
                         <div class="block-two-left">
                             <h3 class="help__subtitle-volunteer title">Стать волонтером</h3>
-                            <img src="img/girls-dog.png" alt="девушка гладит собаку" class="help__img-block-two" width="580" height="349">
+                            <img src="img/girls-dog.png" alt="девушка гладит собаку" class="help__img-block-two" width="580" height="349" loading="lazy">
                         </div>
                         <div class="block-two-right">
                             <p class="help__element help__element_volunteer">Наш приют "Friendly House" привлекает волонтеров для оказания помощи в самых разных форматах! От финансовой помощи и набирающего популярность интеллектуального волонтерства до помощи руками.</p>
@@ -312,7 +320,7 @@
                         </div>
 
                         <div class="block-three-right">
-                            <img src="img/cat-dog.png" alt="коты" class="help__block-three" width="580" height="382">
+                            <img src="img/cat-dog.png" alt="коты" class="help__block-three" width="580" height="382" loading="lazy">
                         </div>
                         
                     </li>
@@ -334,7 +342,7 @@
                                 <picture>
                                     <source srcset="img/pets/pets-pinki-one.avif" type="image/avif"> 
                                     <source srcset="img/pets/pets-pinki-one.webp" type="image/webp"> 
-                                    <img src="img/pets/pets-pinki-one.jpg" alt="две морские свинки едят морковку" class="pets__img" width="480" height="280">
+                                    <img src="img/pets/pets-pinki-one.jpg" alt="две морские свинки едят морковку" class="pets__img" width="480" height="280" loading="lazy">
                                 </picture>
                                 <figcaption class="pets__figcaption">Твинки и Пинки, 2 месяца</figcaption>
                             </figure>
@@ -344,7 +352,7 @@
                                 <picture>
                                     <source srcset="img/pets/pets-murzik-two.avif" type="image/avif"> 
                                     <source srcset="img/pets/pets-murzik-two.webp" type="image/webp"> 
-                                    <img src="img/pets/pets-murzik-two.jpg" alt="кот по кличке мурзик" class="pets__img" width="280" height="280">
+                                    <img src="img/pets/pets-murzik-two.jpg" alt="кот по кличке мурзик" class="pets__img" width="280" height="280" loading="lazy">
                                 </picture>
                                 <figcaption class="pets__figcaption">Мурзик, 6 месяцев</figcaption>
                             </figure>
@@ -354,7 +362,7 @@
                                 <picture>
                                     <source srcset="img/pets/pets-misha-rich-three.avif" type="image/avif"> 
                                     <source srcset="img/pets/pets-misha-rich-three.webp" type="image/webp"> 
-                                    <img src="img/pets/pets-misha-rich-three.jpg" alt="кошка в обнимку с собакой" class="pets__img" width="380" height="650">
+                                    <img src="img/pets/pets-misha-rich-three.jpg" alt="кошка в обнимку с собакой" class="pets__img" width="380" height="650" loading="lazy">
                                 </picture>
                                 <figcaption class="pets__figcaption">Миша (кот) и Ричард (пёс), 3 года и 5 лет</figcaption>
                             </figure>
@@ -364,7 +372,7 @@
                                 <picture>
                                     <source srcset="img/pets/pets-jek-four.avif" type="image/avif"> 
                                     <source srcset="img/pets/pets-jek-four.webp" type="image/webp"> 
-                                    <img src="img/pets/pets-jek-four.jpg" alt="рыжая собака" class="pets__img" width="280" height="280">
+                                    <img src="img/pets/pets-jek-four.jpg" alt="рыжая собака" class="pets__img" width="280" height="280" loading="lazy">
                                 </picture>
                                 <figcaption class="pets__figcaption">Джек, 1 год</figcaption>
                             </figure>
@@ -374,7 +382,7 @@
                                 <picture>
                                     <source srcset="img/pets/pets-jerry-five.avif" type="image/avif"> 
                                     <source srcset="img/pets/pets-jerry-five.webp" type="image/webp"> 
-                                    <img src="img/pets/pets-jerry-five.jpg" alt="хомяк по имени джерри" class="pets__img" width="280" height="280">
+                                    <img src="img/pets/pets-jerry-five.jpg" alt="хомяк по имени джерри" class="pets__img" width="280" height="280" loading="lazy">
                                 </picture>
                                 <figcaption class="pets__figcaption">Джерри, 3 недели</figcaption>
                             </figure>
@@ -384,7 +392,7 @@
                                 <picture>
                                     <source srcset="img/pets/pets-rokki-six.avif" type="image/avif"> 
                                     <source srcset="img/pets/pets-rokki-six.webp" type="image/webp"> 
-                                    <img src="img/pets/pets-rokki-six.jpg" alt="голубой попугай" class="pets__img" width="180" height="280">
+                                    <img src="img/pets/pets-rokki-six.jpg" alt="голубой попугай" class="pets__img" width="180" height="280" loading="lazy">
                                 </picture>
                                 <figcaption class="pets__figcaption pets__figcaption_six">Рокки и Сеня, 2 и 3 года</figcaption>
                             </figure>

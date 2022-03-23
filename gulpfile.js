@@ -14,6 +14,8 @@ import gulpWebp from 'gulp-webp';
 import gulpAvif from 'gulp-avif';
 import { stream as critical } from 'critical';
 import gulpif from 'gulp-if';
+import autoprefixer from 'gulp-autoprefixer';
+import babel from 'gulp-babel';
 
 const prepros = true;
 
@@ -43,6 +45,7 @@ export const scss = () => {
 			.src('src/scss/**/*.scss')
 			.pipe(gulpif(dev, soursemaps.init()))
 			.pipe(sass().on('error', sass.logError))
+			.pipe(autoprefixer())
 			.pipe(cleanCSS({
 				2: {
 					specialComments: 0,
@@ -58,6 +61,7 @@ export const scss = () => {
 		.pipe(gulpCssimport({
 			extensions: ['css'],
 		}))
+		.pipe(autoprefixer())
 		.pipe(cleanCSS({
 			2: {
 				specialComments: 0,
@@ -71,6 +75,10 @@ export const scss = () => {
 export const js = () => gulp
 	.src([...allJS, 'src/js/**/*.js'])
 	.pipe(gulpif(dev, soursemaps.init()))
+	.pipe(babel({
+		presets: ['@babel/preset-env'],
+		ignore: [...allJS, 'src/js/**/*.min.js']
+	}))
 	.pipe(terser())
 	.pipe(concat('index.min.js'))
 	.pipe(gulpif(dev, soursemaps.write('../maps')))

@@ -10,6 +10,20 @@
 	flex-direction: row;
 	justify-content: space-between;
 	height: 580px;
+	@media(max-width: 768px) {
+		position: relative;
+	}
+}
+.sara__wrapper-title {
+	z-index: 12;
+	@media(max-width: 768px) {
+		position: absolute;
+		top: 0;
+		left: 15px;
+	}
+	@media(max-width: 640px) {
+		max-width: 469px;
+	}
 }
 .sara__title {
 	font-family: "Comfortaa-Light";
@@ -17,7 +31,7 @@
 	font-weight: 300;
 	font-size: 40px;
 	line-height: 60px;
-	width: 410px;
+	max-width: 410px;
 	z-index: 10;
 }
 .sara__title-orange {
@@ -27,7 +41,6 @@
 	font-weight: 400;
 	font-size: 60px;
 	line-height: 60px;
-	width: 530px;
 	z-index: 10;
 }
 .wrapper-text {
@@ -37,7 +50,6 @@
 	gap: 81px;
 	margin-bottom: 25px;
 	align-self: flex-end;
-	padding-left: 100px;
 }
 .wrapper-dog {
 	&::after {
@@ -53,22 +65,53 @@
 			url('../img/sara-dog.webp') 1x,
 			url('../img/sara-dog.png') 1x
 		);
+		background-repeat:no-repeat;
+		background-position: center;
 		width: 580px;
 		height: 580px;
 		position: absolute;
 		top: 0;
-		right: 0;
+		right: 300px;
+		@media (max-width: 1090px) {
+			background-image: url('../img/sara-dog@1024.png');
+			background-image: -webkit-image-set(
+				url('../img/sara-dog@1024.avif') 1x,
+				url('../img/sara-dog@1024.webp') 1x,
+				url('../img/sara-dog@1024.png') 1x
+			);
+			background-image: image-set(
+				url('../img/sara-dog@1024.avif') 1x,
+				url('../img/sara-dog@1024.webp') 1x,
+				url('../img/sara-dog@1024.png') 1x
+			);
+			width: 416px;
+			height: 416px;
+			top: 67px;
+			background-position: bottom center;
+		}
 	}
 }
 .wrapper-name-animals {
 	margin-right: 100px;
+	max-width: 180px;
 	padding-top: 100px;
 	z-index: 10;
-	display: none;
+	@media (max-width: 1024px) {
+		margin-right: 0;
+		padding-top: 0;
+		margin: auto 0;
+	}
+	@media (max-width: 820px) {
+		margin: 0;
+		padding-top: 141px;
+	}
+	@media (max-width: 768px) {
+		padding-top:200px;
+	}
 }
 .sara__block-btn {
 	display: flex;
-	justify-content: flex-start;
+	align-self: center;
 	z-index: 10;
 	max-width: 180px;
 	height: 155px;
@@ -79,6 +122,15 @@
 	&:active {
 		filter: opacity(0.8);
 	}
+	@media(max-width: 820px) {
+		align-self: start;
+	}
+	@media(max-width: 768px) {
+		margin-top: 201px;
+	}
+	@media(max-width: 640px) {
+		margin-top: 0;
+	}
 }
 .sara__element {
 	font-family: "Helvetica Neue Cyr-Light";
@@ -86,6 +138,10 @@
 	font-weight: 300;
 	font-size: 20px;
 	line-height: 26px;
+	@media (max-width: 1024px) {
+		font-size: 18px;
+		line-height: 24px;
+	}
 }
 .sara__btn {
 	font-family: "Helvetica Neue Cyr-Medium";
@@ -125,10 +181,20 @@
 		border: 1px solid $main-orange;
 		color: $main-orange;
 	}
+	@media(max-width: 820px) {
+		max-width: 140px;
+		height: 60px;
+	}
 }
 .sara__item {
 	&:not(:last-child) {
 		margin-bottom: 30px;
+		@media(max-width: 1024px) {
+			margin-bottom: 20px;
+		}
+		@media(max-width: 820px) {
+			margin-bottom: 15px;
+		}
 	}
 }
 .sara-container {
@@ -306,12 +372,13 @@
 	.sara__title {
 		font-size: 30px;
 		line-height: 44px;
-		width: 300px;
+		max-width: 300px;
 		height: 182px;
 	}
 	.wrapper-text {
 		gap: 13px;
 		align-self: center;
+		margin-bottom: 0;
 	}
 	.sara__block-btn {
 		width: 148px;
@@ -327,15 +394,13 @@
 	}
 	.wrapper-dog {
 		&::after {
-			width: 450px;
-			height: 450px;
-			right: 30px;
 			background-position: center;
-			background-size: cover;
+			top: 14px;
+			right: 232px;
 		}
 	}
 }
-@media (max-width: 768px) {
+@media (max-width: 820px) {
 	.sara {
 		padding: 15px 0 60px 0;
 	}
@@ -344,9 +409,8 @@
 	}
 	.wrapper-text {
 		padding-left: 0;
-		align-self: start;
 		margin-bottom: 0;
-		gap: 150px;
+		align-self: center;
 	}
 	.sara__title-orange {
 		font-size: 40px;
@@ -356,50 +420,96 @@
 		font-size: 24px;
 		line-height: 30px;
 		width: unset;
-		height: unset;
+		height: 182px;
 	}
 	.sara__button {
 		padding-top: 80px;
 		background-image: url(../img/lapa-768.png);
 	}
+	.sara__i {
+		width: 60px;
+		height: 60px;
+	}
 	.sara__block-btn {
 		width: 145px;
 		height: 120px;
-		margin-left: 80px;
 	}
 	.wrapper-dog {
 		&::after {
 			width: 420px;
-			height: 420px;
-			right: 0;
-			top: 51px;
+			height: 416px;
+			right: 140px;
+			top: 75px;
 			background-position: center;
-			background-size: cover;
 		}
 	}
 }
-@media (max-width: 650px) {
-	.wrapper-dog {
-		&::after {
-			background-position: right -66px bottom;
-			background-repeat: no-repeat;
-		}
+
+@media(max-width: 768px) {
+	.wrapper-text {
+		align-self: start;
+		gap: 0;
 	}
+
 	.sara__title {
-		width: 326px;
-		text-align: center;
+		height: unset;
+		display: inline;
 	}
 }
-@media (max-width: 500px) {
+@media (max-width: 640px) {
+	.sara__item:not(:last-child){
+		margin-bottom: 0;
+	}
+	.sara__item {
+		width: 60px;
+		height: 85px;
+	}
+	.btn-animals {
+		flex-direction: column;
+		gap: 5px;
+	}
+	.container-sara {
+		min-height: 730px;
+		flex-direction: column-reverse;
+		justify-content: unset;
+		gap: 25px;
+	}
+	.sara__list {
+		display: flex;
+		flex-direction: row;
+	}
+	.wrapper-name-animals {
+		padding-top: 0;
+	}
+	.wrapper-dog::after {
+		right: 105px;
+	}
+	.btn-animals {
+		width: 60px;
+		height: 96px;
+		gap: 0;
+	}
+	.wrapper-name-animals {
+		max-width: 375px;
+		margin: 0 auto;
+	}
+	.sara__list {
+		gap: 45px;
+	}
+	.wrapper-text {
+		align-self: center;
+	}
+}
+@media (max-width: 460px) {
 	.sara {
 		padding: 15px 0 40px 0;
 	}
 	.container-sara {
-		height: 536px;
+		min-height: 536px;
+		gap: 20px;
 	}
-	.wrapper-text {
-		gap: 346px;
-		width: 100%;
+	.sara__wrapper-title {
+		max-width: 270px;
 	}
 	.sara__title-orange {
 		font-size: 26px;
@@ -408,14 +518,13 @@
 	.sara__title {
 		font-size: 18px;
 		line-height: 26px;
-		width: 270px;
-		align-self: center;
+	}
+	.sara__list {
+		gap: 10px;
 	}
 	.sara__block-btn {
 		width: 84px;
 		height: 78px;
-		margin-left: 0;
-		align-self: center;
 	}
 	.sara__btn {
 		font-size: 8px;
@@ -428,25 +537,31 @@
 	}
 	.wrapper-dog {
 		&::after {
-			width: 296px;
-			height: 330px;
-			right: 130px;
-			top: 82px;
-			background-position: top right -84px;
+			background-image: url('../img/sara-dog@320.png');
+			background-image: -webkit-image-set(
+				url('../img/sara-dog@320.avif') 1x,
+				url('../img/sara-dog@320.webp') 1x,
+				url('../img/sara-dog@320.png') 1x
+			);
+			background-image: image-set(
+				url('../img/sara-dog@320.avif') 1x,
+				url('../img/sara-dog@320.webp') 1x,
+				url('../img/sara-dog@320.png') 1x
+			);
+			width: 270px;
+			height: 266px;
+			right: 60px;
+			top: 79px;
+			background-position: center;
 		}
 	}
 }
 @media (max-width: 320px) {
-	.sara__title {
-		text-align: start;
-	}
+	
 	.wrapper-dog {
 		&::after {
-			width: 270px;
-			height: 266px;
-			right: 29px;
+			right: 26px;
 			background-position: center;
-			background-size: cover;
 		}
 	}
 }

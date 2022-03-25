@@ -23,7 +23,7 @@
             createLink('css/index.css');
         })
     </script>
-    <!-- <link rel="stylesheet" href="css/index.css"> -->
+    
     <script defer src="js/index.min.js"></script>
 
 </head>
@@ -33,12 +33,12 @@
         <div class="container">
             <nav class="header__nav">
                 <div class="header__button">
-                    <button class="header__menu burg-btn">
+                    <button class="header__menu burg-btn"  aria-label="кнопка открывает меню" aria-haspopup="menu">
                         <img src="img/header-menu-btn.svg" alt="три полоски" class="header__menu-img" width="40" height="21">
                     </button>
                 </div>
                 <img src="img/header-logo-friendly.png" alt="friendly house" class="header__logo" width="356" height="72">
-                <a href="tel:8(849)300-39-57" class="header__link">8 (849) 300 - 39 -57</a>
+                <a href="tel:8(849)300-39-57" class="header__link" aria-label="при нажатии звонок по номеру">8 (849) 300 - 39 -57</a>
 
                 <!-- верстка бургер меню -->
                 <div class="burger burger-menu burger_position">
@@ -78,7 +78,7 @@
                         её человек</h2>
                     </div>
                     <div class="sara__block-btn">
-                        <button class="sara__btn sara__button">Жми на лапку, чтобы помочь!</button>
+                        <button class="sara__btn sara__button" aria-label="кнопка открывает модальное окно">Жми на лапку, чтобы помочь!</button>
                     </div>
                 </div>
             
@@ -86,7 +86,7 @@
                 <div class="wrapper-name-animals wrp">
                     <ul class="sara__list">
                         <li class="sara__item boris">
-                            <button class="btn-animals">
+                            <button class="btn-animals"  aria-label="кнопка выводит на экран картинку кота">
                                 <picture>
                                     <source media="(max-width: 820px)" srcset="img/cat-boris@768.avif" type="image/avif">
                                     <source media="(max-width: 820px)" srcset="img/cat-boris@768.webp" type="image/webp">
@@ -99,7 +99,7 @@
                             </button>
                         </li>
                         <li class="sara__item lui">
-                            <button class="btn-animals">
+                            <button class="btn-animals"  aria-label="кнопка выводит на экран картинку собаки">
                                 <picture>
                                     <source media="(max-width: 820px)" srcset="img/dog-lui@768.avif" type="image/avif">
                                     <source media="(max-width: 820px)" srcset="img/dog-lui@768.webp" type="image/webp">
@@ -112,7 +112,7 @@
                             </button>
                         </li>
                         <li class="sara__item piter">
-                            <button class="btn-animals">
+                            <button class="btn-animals"  aria-label="кнопка выводит на экран картинку кролика">
                                 <picture>
                                     <source media="(max-width: 820px)" srcset="img/rabbit-piter@768.avif" type="image/avif">
                                     <source media="(max-width: 820px)" srcset="img/rabbit-piter@768.webp" type="image/webp">
@@ -125,7 +125,7 @@
                             </button>
                         </li>
                         <li class="sara__item kenny">
-                            <button class="btn-animals">
+                            <button class="btn-animals"  aria-label="кнопка выводит на экран картинку рыжего кота">
                                 <picture>
                                     <source media="(max-width: 820px)" srcset="img/cat-kenny@768.avif" type="image/avif">
                                     <source media="(max-width: 820px)" srcset="img/cat-kenny@768.webp" type="image/webp">
@@ -146,7 +146,7 @@
             <div class="sara-container modal-order">
                 <div class="form-wrapper form-wrap form-modal">
 
-                    <button class="sara__modal-knopa">
+                    <button class="sara__modal-knopa" aria-label="кнопка закрытия модального окна">
                         <img src="img/knopa-modal.svg" alt="крестик кнопка" class="sara__modal-img" width="22" height="22">
                     </button>
                     <h2 class="sara__title-modal">Ты можешь помочь нам!</h2>
@@ -161,7 +161,7 @@
                     <form  class="sara__form-input" action="#" id="my-form-two">
                         <h3 class="sara__subtitle">Или оставь свои контакты и мы сами свяжемся с тобой!</h3>
 
-                        <div class="form__wrapper">
+                        <div class="form-wrapper-i">
 
                             <div class="form-field">
                                 <label class="form-field__label"  for="username-two">Номер телефона</label>
@@ -175,7 +175,7 @@
                             
                         </div>
                         <div class="sara__btn-lapa">
-                            <button class="sara__btn-modal sara__btn-img" type="submit">Отправить</button>
+                            <button class="sara__btn-modal sara__btn-img" type="submit" aria-label="кнопка отправки данных">Отправить</button>
                         </div>
 
                     </form>
@@ -213,7 +213,11 @@
                                 <div class="our-project__img our-project__blue-dog"></div>
                                 <div class="our-project__text">
                                     <h3 class="our-project__subtitle-img">Новый дом для животных</h3>
-                                    <p class="our-project__text-img">Приют появился практически одновременно с созданием Фонда в ...</p>
+                                    <p class="our-project__text-img our-project__text-img-origin">Приют появился практически одновременно с созданием Фонда в ...</p>
+                                    <p class="our-project__text-img our-project__text-img-dubl768">Приют появился практически одновременно с созданием ...
+                                    </p>
+                                    <p class="our-project__text-img our-project__text-img-dubl320">Приют появился практически одно...
+                                    </p>
                                     <a href="#" class="our-project__link-img">Подробнее</a>
                                 </div>
                             </li>
@@ -222,7 +226,11 @@
                                 <div class="our-project__img our-project__orange-dog"></div>
                                 <div class="our-project__text">
                                     <h3 class="our-project__subtitle-img">Маленькие модники</h3>
-                                    <p class="our-project__text-img">Наши котики и собачки тоже любят наряжаться, чтобы красиво выглядеть ...</p>
+                                    <p class="our-project__text-img our-project__text-img-origin">Наши котики и собачки тоже любят наряжаться, чтобы красиво выглядеть ...</p>
+                                    <p class="our-project__text-img our-project__text-img-dubl768">Наши котики и собачки тоже любят наряжаться, чтобы красиво ...
+                                    </p>
+                                    <p class="our-project__text-img our-project__text-img-dubl320">Наши котики и собачки тоже лю...
+                                    </p>
                                     <a href="#" class="our-project__link-img">Подробнее</a>
                                 </div>
                             </li>
@@ -231,7 +239,11 @@
                                 <div class="our-project__img our-project__dog-girl"></div>
                                 <div class="our-project__text">
                                     <h3 class="our-project__subtitle-img">Поиграй со мной!</h3>
-                                    <p class="our-project__text-img">Новая программа нашего приюта “Поиграй со мной”. Приводите своих ...</p>
+                                    <p class="our-project__text-img our-project__text-img-origin">Новая программа нашего приюта “Поиграй со мной”. Приводите своих ...</p>
+                                    <p class="our-project__text-img our-project__text-img-dubl768">Новая программа нашего приюта “Поиграй со мной”. Приводите ...
+                                    </p>
+                                    <p class="our-project__text-img our-project__text-img-dubl320">Новая программа нашего приюта ...
+                                    </p>
                                     <a href="#" class="our-project__link-img">Подробнее</a>
                                 </div>
                             </li>
@@ -240,7 +252,11 @@
                                 <div class="our-project__img our-project__dog-brown"></div>
                                 <div class="our-project__text">
                                     <h3 class="our-project__subtitle-img">Конкурс “Лучшее фото”</h3>
-                                    <p class="our-project__text-img">Приходи к нам в Friendly House и делай классные фотографии наших животн...</p>
+                                    <p class="our-project__text-img our-project__text-img-origin">Приходи к нам в Friendly House и делай классные фотографии наших животн...</p>
+                                    <p class="our-project__text-img our-project__text-img-dubl768">Приходи к нам в Friendly House и делай классные фотографии ...
+                                    </p>
+                                    <p class="our-project__text-img our-project__text-img-dubl320">Приходи к нам в Friendly House и ...
+                                    </p>
                                     <a href="#" class="our-project__link-img">Подробнее</a>
                                 </div>
                             </li>
@@ -249,10 +265,8 @@
 
                     <div class="news-dog">
                         <div class="news-dog__block-img news-dog__block-img-two">
-                            <a href="#" class="news-dog__link">Подробнее</a>
                             <p class="news-dog__element">Собака лучший друг человека, или.... собаки?</p>
-                            <!-- <a href="#" class="news-dog__link">Подробнее</a> -->
-                            <a href="#" class="news-dog__link-under">Увидеть все</a>
+                            <a href="#" class="news-dog__link">Подробнее</a>
                         </div>
                     </div>
 
@@ -303,7 +317,7 @@
                             </ul>
 
                         </div>
-
+                        <a href="#" class="big-project__link">Увидеть все</a>
                     </div>
 
                 </div>

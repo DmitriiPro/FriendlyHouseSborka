@@ -1,0 +1,139 @@
+.footer {
+	padding: 90px 0;
+	background-color: $main-color;
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 87px;
+	}
+	&__block-one {
+		display: flex;
+		gap: 120px;
+	}
+	&__block-two {
+		display: flex;
+		justify-content: space-between;
+		max-width: 1079px;
+	
+	}
+	&__section-maps {
+		max-width: 318px;
+		align-self: center;
+	}
+	&__title {
+		font-family: 'Comfortaa-Bold';
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 40px;
+		color: #FFFFFF;
+		margin-bottom: 8px;
+	}
+	&__text-one {
+		font-size: 20px;
+		line-height: 26px;
+		color: #FFFFFF;
+		margin-bottom: 22px;
+	}
+	&__text-two {
+		font-size: 14px;
+		line-height: 18px;
+		color: #FFFFFF;
+		margin-bottom: 30px;
+	}
+	&__link {
+		font-family: 'Helvetica Neue Cyr-Medium';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 30px;
+		color: #FFFFFF;
+		padding-left: 38px;
+		position: relative;
+		transition: color 0.200ms ease;
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 24px;
+			height: 24px;
+			@extend %backgImg;
+		}
+		&:hover {
+			color: $main-orange;
+		}
+	}
+	&__link-number:before {
+		background-image: url('../img/footer-link-number.png');
+	}
+	&__link-mail:before {
+		background-image: url('../img/footer-link-mail.png');
+	}
+	&__text-link-number {
+		margin-bottom: 20px;
+		// position: relative;
+	}
+	// &__text-link-mail {
+	// 	position: relative;
+	// }
+	&__text-info {
+		font-size: 20px;
+		line-height: 26px;
+		color: #FFFFFF;
+		font-family: 'Helvetica Neue Cyr-Light';
+	}
+	&__info-block {
+		max-width: 433px;
+	}
+	&__info {
+		font-family: 'Arial';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16px;
+		color: #FFFFFF;
+		transition: color 0.200s ease;
+	}
+	&__info-mail:hover {
+		color: $main-orange;
+	}
+	&__picture {
+		display: block;
+		margin-bottom: 8px;
+	}
+	&__list-icon {
+		display: flex;
+		gap: 39px;
+		margin-bottom: 19px;
+	}
+	&__svg {
+		// width: 40px;
+		// height: 40px;
+	}
+	&__item-icon {
+		color: $main-orange;
+		transition: color 0.200s ease;
+	}
+	&__item-icon-inst:hover {
+		color: #bc1888;
+	} 
+	&__item-icon-vk:hover {
+		color: #0066FF;
+	}
+	&__item-icon-fc:hover {
+		color: #0000CC;
+		opacity: 0.6;
+	} 
+	&__item-icon-tele:hover {
+		color: #66CCFF;
+	}
+	&__svg {
+		fill: currentColor;
+		width: 40px;
+		height: 40px;
+	}
+	&__address {
+		max-width: 277px;
+	}
+
+}

@@ -74,3 +74,58 @@ const swiper = () => {
 
 }
 swiper();
+
+const maps = () => {
+
+    ymaps.ready(init);
+    function init(){
+        const myMap = new ymaps.Map("map", {
+            center: [55.849206, 37.375674],
+            zoom: 12
+        });
+
+        const mark = new ymaps.Placemark([55.849206, 37.375674], {}, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/footermaps.svg',
+            iconImageSize: [39, 59],
+            iconImageOffset: [-33, -59]
+        })
+
+        myMap.geoObjects.add(mark)
+
+        myMap.behaviors.disable('scrollZoom'); // запрещает зум карты колесиком мыши
+        myMap.behaviors.disable('drag'); // запрещает скролл свайпом
+            
+        myMap.controls.remove('rulerControl'); // удаляет контрол правила
+        myMap.controls.remove('zoomControl'); // удаляет контроль зумирования
+        myMap.controls.remove('fullscreenControl'); // удаляет переход в полноэкранный режим
+        myMap.controls.remove('typeSelector'); // удаляет тип
+        myMap.controls.remove('trafficControl'); // удаляет контроль трафика
+        myMap.controls.remove('searchControl'); // удаляет поиск
+        myMap.controls.remove('geolocationControl'); // удаляет геолокацию местоположение
+    }
+
+}
+maps();
+
+const safari = () => {
+    document.addEventListener('click', event => {
+        if (event.target.matches('button')) {
+            event.target.focus()
+        }
+        })
+};
+safari();
+
+const scroll = () => {
+
+    let $page = $('html, body'); // для плавного скролла по якорям
+    $('a[href*="#"]').click(function() {
+    $page.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
+    return false;
+    });
+
+};
+scroll();

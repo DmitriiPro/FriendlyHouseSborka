@@ -81,12 +81,15 @@ form {
 	max-width: 1240px;
 	padding: 0 30px;
 	margin: 0 auto;
+	@media (max-width: 768px) {
+			padding: 0 15px;
+	}
 }
 section {
 	padding: 45px 0;
 }
-@media (max-width: 768px) {
-	.container {
-		padding: 0 15px;
-	}
-}
+// @media (max-width: 768px) {
+// 	.container {
+// 		padding: 0 15px;
+// 	}
+// }

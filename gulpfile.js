@@ -26,6 +26,7 @@ const sass = gulpSass(sassPkg);
 const allJS = [
 	'src/libs/jquery-3.6.0.min.js',
 	'src/libs/swiper-bundle.min.js',
+	'src/libs/inputmask.min.js',
 ];
 
 //задачи

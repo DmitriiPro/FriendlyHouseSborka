@@ -1,5 +1,6 @@
 const form = () => {
     const formSubtitle = $('.form__subtitle'); // нашли заголовок в форме
+    const modalForm = document.querySelector('.form__form-input'); 
 
     $('.form-field__input-num').focus( () => { // при фокусе на поле меняем текст
         formSubtitle
@@ -26,6 +27,7 @@ const form = () => {
             data: $(this).serialize(),
             success(data) {
                 formSubtitle.text('Спасибо ваша заявка принята, номер заявки ' + data.id)
+                modalForm.reset();
             }, 
             error() {
                 formSubtitle.text('Что то пошло не так, попробуйте позже!')
@@ -39,7 +41,7 @@ const form = () => {
 
 form();
 
-const swiper = () => {
+// const swiper = () => {
 //     const swiper = new Swiper('.swiper1', {
 //         // Optional parameters
 //         direction: 'vertical',
@@ -72,8 +74,8 @@ const swiper = () => {
 //     };
     
 
-}
-swiper();
+// }
+// swiper();
 
 const maps = () => {
 
@@ -129,3 +131,58 @@ const scroll = () => {
 
 };
 scroll();
+
+const maskOne = () => {
+    const inputMaskTel = document.querySelector('.form-field__maska'); // нашел сам инпут телефон другой класс
+    const telMask = new Inputmask('+7 (999)-999-99-99'); // на инпут сделал маску для номера 
+    telMask.mask(inputMaskTel);
+};
+maskOne();
+
+const maskTwo = () => {
+    const mask = document.querySelector('.form-field__mask-two'); // нашел сам инпут телефон другой класс
+    const numberMask = new Inputmask('+7 (999)-999-99-99'); // на инпут сделал маску для номера 
+    numberMask.mask(mask);
+};
+maskTwo();
+
+// const swiperFree = () => {
+    
+	// const swiper = new Swiper('.swiper3', 
+    // {
+	// 	// slidePerView: 0,
+	// 	// loop: true,
+	// 	// navigation: {
+	// 	// nextEl: '.swiper-button-right',
+	// 	// prevEl: '.swiper-button-left',
+	// 	// },
+
+	// 	// mousewheel: true,
+	// 	// keyboard: true,
+
+
+	// 	breakpoints: {
+	// 		// when window width is >= 320px
+	// 		320: {
+	// 			slidesPerView: 1,
+	// 			spaceBetween: 5
+	// 		},
+	// 		// when window width is >= 480px
+	// 		768: {
+	// 			slidesPerView: 1,
+	// 			spaceBetween: 5,
+    //             navigation: {
+    //                 nextEl: '.swiper-button-right',
+    //                 prevEl: '.swiper-button-left',
+    //                 }
+	// 		},
+	// 		// when window width is >= 640px
+	// 		// 1024: {
+	// 		// 	slidesPerView: 1,
+	// 		// 	spaceBetween: 5
+	// 		// }
+	// 	}
+	// });
+
+// };
+// swiperFree();

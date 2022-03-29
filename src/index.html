@@ -171,7 +171,7 @@
 
                             <div class="form-field">
                                 <label class="form-field__label"  for="username-two">Номер телефона</label>
-                                <input class="form-field__input form-field__input-number" type="tel" name="tel" title="+7___-___-__-__" pattern="^\+?[7-8]-?[0-9]{3}-?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$" required id="username-two">
+                                <input class="form-field__input form-field__input-number form-field__mask-two" type="tel" name="tel"  required id="username-two">
                             </div>
                             
                             <div class="form-field">
@@ -340,8 +340,8 @@
                             <h3 class="help__subtitle-finance title">Финансово</h3>
                             <p class="help__element help__element_finance">Мы будем рады любым пожертвованиям. Деньги пойдут на корм, лечение и уход, а также, на обустройство территории, где обитают наши маленькие питомцы.</p>
                         </div>
-                        <div class="block-one ">
-                            
+                        <div class="block-one">
+
                             <picture class="help__b-i-one ">
                                 <source srcset="img/help-rabbit@768.avif" media="(max-width: 768px)" type="image/avif">
                                 <source srcset="img/help-rabbit@768.webp" media="(max-width: 768px)" type="image/webp">
@@ -378,7 +378,6 @@
                                 <source  type="image/webp" srcset="img/help-dog-mops.webp">
                                 <img src="img/help-dog-mops.jpg" alt="собаки" class="help__img-three" width="380" height="298" loading="lazy">
                             </picture>
-                            
                         </div>
                     </li>
 
@@ -466,9 +465,9 @@
             <div class="container">
                 <h2 class="pets__title">Наши питомцы</h2>
 
-                <div class="pets__wrapper">
-                    <ul class="pets__list">
-                        <li class="pets__item pets__item_one">
+                <div class="pets__wrapper swiper3">
+                    <ul class="pets__list swiper-wrapper">
+                        <li class="pets__item pets__item_one swiper-slide">
                             <figure class="pets__figure pets__figure_one">
                                 <picture>
                                     <source srcset="img/pets/pets-pinki-one.avif" type="image/avif"> 
@@ -478,7 +477,7 @@
                                 <figcaption class="pets__figcaption">Твинки и Пинки, 2 месяца</figcaption>
                             </figure>
                         </li>
-                        <li class="pets__item pets__item_two">
+                        <li class="pets__item pets__item_two swiper-slide">
                             <figure class="pets__figure pets__figure_two">
                                 <picture>
                                     <source srcset="img/pets/pets-murzik-two.avif" type="image/avif"> 
@@ -488,7 +487,7 @@
                                 <figcaption class="pets__figcaption">Мурзик, 6 месяцев</figcaption>
                             </figure>
                         </li>
-                        <li class="pets__item pets__item_three">
+                        <li class="pets__item pets__item_three swiper-slide">
                             <figure class="pets__figure pets__figure_three">
                                 <picture>
                                     <source srcset="img/pets/pets-misha-rich-three.avif" type="image/avif"> 
@@ -498,7 +497,7 @@
                                 <figcaption class="pets__figcaption">Миша (кот) и Ричард (пёс), 3 года и 5 лет</figcaption>
                             </figure>
                         </li>
-                        <li class="pets__item pets__item_four">
+                        <li class="pets__item pets__item_four swiper-slide">
                             <figure class="pets__figure pets__figure_four">
                                 <picture>
                                     <source srcset="img/pets/pets-jek-four.avif" type="image/avif"> 
@@ -508,7 +507,7 @@
                                 <figcaption class="pets__figcaption">Джек, 1 год</figcaption>
                             </figure>
                         </li>
-                        <li class="pets__item pets__item_five">
+                        <li class="pets__item pets__item_five swiper-slide">
                             <figure class="pets__figure pets__figure_five">
                                 <picture>
                                     <source srcset="img/pets/pets-jerry-five.avif" type="image/avif"> 
@@ -518,7 +517,7 @@
                                 <figcaption class="pets__figcaption">Джерри, 3 недели</figcaption>
                             </figure>
                         </li>
-                        <li class="pets__item pets__item_six">
+                        <li class="pets__item pets__item_six swiper-slide">
                             <figure class="pets__figure pets__figure_six">
                                 <picture>
                                     <source srcset="img/pets/pets-rokki-six.avif" type="image/avif"> 
@@ -529,6 +528,8 @@
                             </figure>
                         </li>
                     </ul>
+                    <div class="swiper-button-right"></div>
+                    <div class="swiper-button-left"></div>
                 </div>
             </div>
         </section>
@@ -555,7 +556,7 @@
 
                             <div class="form-field">
                                 <label class="form-field__label"  for="username">Номер телефона</label>
-                                <input class="form-field__input-num form__inp" type="tel" name="tel" title="+7___-___-__-__" pattern="^\+?[7-8]-?[0-9]{3}-?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$" required id="username">
+                                <input class="form-field__input-num form-field__maska form__inp" type="tel" name="tel"  required id="username">
                             </div>
                             
                             <div class="form-field">

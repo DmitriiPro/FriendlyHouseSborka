@@ -5,6 +5,7 @@ const sara = () => {
     const modalOrder = $('.modal-order');
     const modalTitle = $('.sara__subtitle'); // нашел заголовок в форме
     const modalBtnHelp = $('.help__btn-modal'); // кнопка из блока help
+    const modalFormSara = document.querySelector('.sara__form-input'); 
     
     modalBtn.on('click', function() {  // открывает окно
         modalOrder.show(500);
@@ -49,6 +50,7 @@ const sara = () => {
             data: $(this).serialize(),
             success(data) {
                 modalTitle.text('Спасибо ваша заявка принята, номер заявки ' + data.id)
+                modalFormSara.reset();
             }, 
             error() {
                 modalTitle.text('Что то пошло не так, попробуйте позже!')

@@ -11,10 +11,6 @@
 		padding: 20px 0 70px 0;
 	}
 }
-// .form-container {
-// 	max-width: 1440px;
-// 	margin: 0 auto;
-// }
 .form-wrap {
 	background: $main-background;
 	border-radius: 20px;
@@ -131,15 +127,15 @@
 		margin-bottom: 10px;
 	}
 }
-// .form__element_color_orange {
-// 	font-family: "Helvetica Neue Cyr-Medium";
-// 	font-style: normal;
-// 	font-weight: 500;
-// 	font-size: 20px;
-// 	line-height: 30px;
-// 	color: $main-orange;
-// 	margin-bottom: 20px;
-// }
+.form__element-color-orange {
+	font-family: "Helvetica Neue Cyr-Medium";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 30px;
+	color: $main-orange;
+	margin-bottom: 20px;
+}
 .form__link {
 	font-family: "Helvetica Neue Cyr-Medium";
 	font-style: normal;
@@ -166,7 +162,6 @@
 	background-repeat: no-repeat;
 	background-size: contain;
 	margin-right: 45px;
-	// width: 177px;
 	@media(max-width: 1024px) {
 		margin-right: 40px;
 	}
@@ -178,7 +173,6 @@
 	background-image: url("../img/email.svg");
 	background-repeat: no-repeat;
 	background-size: contain;
-	// width: 245px;
 }
 .form__subtitle {
 	font-family: "Helvetica Neue Cyr-Light";

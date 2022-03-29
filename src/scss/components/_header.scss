@@ -19,6 +19,28 @@
 	background-size: contain;
 	font-weight: 500;
 	font-family: "Helvetica Neue Cyr-Medium";
+	transition: color 0.200s ease;
+	&:hover {
+		color: $main-orange;
+	}
+}
+.header__link_double {
+	@media(max-width: 768px) {
+		display: block;
+		font-size: 18px;
+		line-height: 24px;
+		padding-left: 38px;
+		background-image: url('../img/header-phone.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		font-weight: 500;
+		font-family: "Helvetica Neue Cyr-Medium";
+	}
+	@media(max-width: 320px) {
+		font-size: 14px;
+		line-height: 20px;
+		padding-left: 31px;
+	}
 }
 .header__button {
 	transition: all 0.200s ease-in;

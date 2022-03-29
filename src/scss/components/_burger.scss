@@ -35,6 +35,7 @@
 	transition: all 0.200ms ease-in;
 	&:hover {
 		text-decoration: underline;
+		color: $main-orange;
 	}
 	&:active {
 		text-decoration: none;

@@ -8,16 +8,6 @@ $main-orange: #FF8A00;
 	background-position: center;
 	background-size: cover;
 }
-// @mixin font($name, $weight) {
-// 	font: {
-// 		family: $name;
-// 		weight: $weight;
-// 		display: swap;
-// 		style: normal;
-// 	}
-// 	src: url("../font/#{ $name }-#{ $weight }.woff2") format("woff2"),
-// 	url("../font/#{ $name }-#{ $weight }.woff") format("woff"),
-// }
 
 @mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
 	@font-face {

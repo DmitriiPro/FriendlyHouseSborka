@@ -25,7 +25,7 @@
     </script>
     
     <script defer src="js/index.min.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=12aebab4-08b6-49aa-9a3f-d9ba8638abdc&lang=ru_RU" type="text/javascript">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=12aebab4-08b6-49aa-9a3f-d9ba8638abdc&lang=ru_RU">
     </script>
 
 </head>
@@ -60,7 +60,7 @@
                                 </li>
                                 <li class="burger__item">
                                     <a href="#footer-id" class="burger__link burger__link_contacts">Контакты</a>
-                                    <a href="tel:8(849)300-39-57" class="header__link header__link_double">8 (849) 300 - 39 -57</a>
+                                    <a href="tel:8(849)300-39-57" class="header__link_double">8 (849) 300 - 39 -57</a>
                                 </li>
                             </ul>
                     </div>
@@ -155,8 +155,7 @@
 
                     <div class="sara__element-indent">
                         <p class="sara__element">Хочешь забрать питомца, стать волонтером, или опекуном?
-                        <span class="sara__element_color_orange">Свяжись с нами!</span></p>
-                        <!-- <p class="sara__element sara__element_color_orange">Свяжись с нами!</p> -->
+                        <span class="sara__element-color-orange">Свяжись с нами!</span></p>
                         <a class="sara__link sara__link_tel" href="tel:8(849)300-39-57">8 (849) 300 - 39 -57</a>
                         <a class="sara__link sara__link_email" href="mailto:FriendlyHouse@gmail.com">FriendlyHouse@gmail.com</a>
                     </div>
@@ -338,7 +337,7 @@
                             <p class="help__element help__element_finance">Мы будем рады любым пожертвованиям. Деньги пойдут на корм, лечение и уход, а также, на обустройство территории, где обитают наши маленькие питомцы.</p>
                         </div>
                         <div class="block-one ">
-                            <!-- <div > -->
+                            
                             <picture class="help__b-i-one ">
                                 <source srcset="img/help-rabbit@768.jpg" media="(max-width: 768px)" type="image/jpg">
                                 <source srcset="img/help-rabbit@320.jpg" media="(max-width: 510px)" type="image/jpg">
@@ -355,7 +354,7 @@
                                 <source media="(max-width: 510px)" type="image/jpg" srcset="img/help-dog-mops@320.jpg">
                                 <img src="img/help-dog-mops.jpg" alt="собаки" class="help__img-three" width="380" height="298" loading="lazy">
                             </picture>
-                            <!-- </div> -->
+                            
                         </div>
                     </li>
 
@@ -492,12 +491,10 @@
 
                     <div class="form__element-indent">
                         <p class="form__element">Хочешь забрать питомца, стать волонтером, или опекуном?
-                        <span class="form__element_color_orange">Свяжись с нами!</span></p>
-                        <!-- <p class="form__element form__element_color_orange">Свяжись с нами!</p> -->
+                        <span class="form__element-color-orange">Свяжись с нами!</span></p>
         
-                            <a class="form__link form__link_tel" href="tel:8(849)300-39-57">8 (849) 300 - 39 -57</a>
-                        
-                            <a class="form__link form__link_email" href="mailto:FriendlyHouse@gmail.com">FriendlyHouse@gmail.com</a>
+                        <a class="form__link form__link_tel" href="tel:8(849)300-39-57">8 (849) 300 - 39 -57</a>
+                        <a class="form__link form__link_email" href="mailto:FriendlyHouse@gmail.com">FriendlyHouse@gmail.com</a>
                         
                     </div>
 
@@ -537,9 +534,8 @@
                 <div class="footer__block-one">
 
                     <div class="footer__maps-block">
-                        <!-- <div class="footer__maps"></div> -->
-                        <!-- <img src="img/footer-maps.jpg" alt="" class="footer__maps" width="680" height="360"> -->
-                        <div id="map" style="width: 680px; height: 360px"></div>
+                        <div class="footer__maps-cart" id="map" style="width: 680px; height: 360px"></div>
+                        <div class="footer__maps-img"></div>
                     </div>
 
                     <div class="footer__section-maps">
@@ -567,6 +563,8 @@
 
                     <div class="footer__info-block">
                         <picture class="footer__picture">
+                            <source srcset="img/footer-text.avif" type="image/avif">
+                            <source srcset="img/footer-text.webp" type="image/webp">
                             <img src="img/footer-text.png" alt="текст Friendly House" class="footer__img-text" width="357" height="42">
                         </picture>
                         <p class="footer__text-info">приют для животных Friendly House® 2011-2021</p>

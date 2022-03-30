@@ -47,7 +47,7 @@
 	left: 0;
 	z-index: 60;
 }
-.header__link_double {
+.header__link-double {
 	display: none;
 }
 @media (max-width: 1024px) {
@@ -72,7 +72,7 @@
 	.burger-wrapper {
 		padding: 27px 20px 31px 20px;
 	}
-	.header__link_double {
+	.header__link-double {
 		display: block;
 		margin-top: 30px;
 		margin-left: 19px;
@@ -99,11 +99,12 @@
 		line-height: 20px;
 		padding-left: 10px;
 	}
-	.header__link_double {
+	.header__link-double {
 		font-size: 14px;
 		line-height: 20px;
-		padding-left: 31px;
+		// padding-left: 31px;
 		margin-top: 18px;
 		margin-left: 10px;
+		// margin-left: 10px;
 	}
 }

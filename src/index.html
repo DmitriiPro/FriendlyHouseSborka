@@ -36,7 +36,11 @@
             <nav class="header__nav">
                 <div class="header__button">
                     <button class="header__menu burg-btn"  aria-label="кнопка открывает меню" aria-haspopup="menu">
-                        <img src="img/header-menu-btn.svg" alt="три полоски" class="header__menu-img" width="40" height="21">
+                        <img  src="img/header-menu-btn.svg" alt="три полоски" class="header__menu-img" width="40" height="21">
+                        <!-- <img class="header__btn-close" src="img/burger-close-mob.svg" alt="кнопка закрытия" width="30" height="30"> -->
+                    </button>
+                    <button class="header__btn-close">
+                        <img  src="img/burger-close-mob.svg" alt="кнопка закрытия" width="30" height="30">
                     </button>
                 </div>
                 <picture>
@@ -64,7 +68,7 @@
                                 </li>
                                 <li class="burger__item">
                                     <a href="#footer-id" class="burger__link burger__link_contacts">Контакты</a>
-                                    <a href="tel:8(849)300-39-57" class="header__link_double">8 (849) 300 - 39 -57</a>
+                                    <a href="tel:8(849)300-39-57" class="header__link-double">8 (849) 300 - 39 -57</a>
                                 </li>
                             </ul>
                         </nav>
@@ -78,8 +82,8 @@
         <section class="sara">
             <div class="container container-sara">
                 <div class="wrapper-text wrp wrapper-dog">
-                    <div class="sara__wrapper-title">
-                    <h2 class="sara__title"><span class="sara__title-orange">Сара ждёт,</span> 
+                <div class="sara__wrapper-title">
+                    <h2 class="sara__title"><span class="sara__title-orange"><span class="sara__title-name">Сара</span> ждёт,</span> 
                         когда найдётся 
                         её человек</h2>
                     </div>
@@ -91,6 +95,19 @@
                 
                 <div class="wrapper-name-animals wrp">
                     <ul class="sara__list">
+                        <li class="sara__item sara__li sara__active">
+                            <button class="btn-animals"  aria-label="кнопка выводит на экран картинку собаки">
+                                <picture>
+                                    <source media="(max-width: 820px)" srcset="img/sara-dog@60-60@768.avif" type="image/avif">
+                                    <source media="(max-width: 820px)" srcset="img/sara-dog@60-60@768.webp" type="image/webp">
+                                    <source media="(max-width: 820px)" srcset="img/sara-dog@60-60@768.png" type="image/png">
+                                    <source srcset="img/sara-dog@80-80@1240.avif" type="image/avif">
+                                    <source srcset="img/sara-dog@80-80@1240.webp" type="image/webp">
+                                    <img src="img/sara-dog@80-80@1240.png" alt="собака" class="sara__i" width="80" height="80">
+                                </picture>
+                                <span class="sara__element">Сара</span>
+                            </button>
+                        </li>
                         <li class="sara__item boris">
                             <button class="btn-animals"  aria-label="кнопка выводит на экран картинку кота">
                                 <picture>
@@ -462,10 +479,10 @@
         </section>
 
         <section class="pets" id="pets-id">
-            <div class="container">
+            <div class="container pets__container">
                 <h2 class="pets__title">Наши питомцы</h2>
 
-                <div class="pets__wrapper swiper3">
+                <div class="swiper slider-container">
                     <ul class="pets__list swiper-wrapper">
                         <li class="pets__item pets__item_one swiper-slide">
                             <figure class="pets__figure pets__figure_one">
@@ -528,9 +545,20 @@
                             </figure>
                         </li>
                     </ul>
-                    <div class="swiper-button-right"></div>
-                    <div class="swiper-button-left"></div>
                 </div>
+                    <button class="button-right btn-swiper">
+                        <svg class="btn-svg right-svg" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="27" cy="27" r="27" fill="#FF8A00"/>
+                            <path d="M22.2925 17.7421C22.1303 17.904 22.0016 18.0963 21.9138 18.308C21.826 18.5197 21.7808 18.7467 21.7808 18.9759C21.7808 19.2051 21.826 19.432 21.9138 19.6437C22.0016 19.8554 22.1303 20.0477 22.2925 20.2096L29.0825 26.9996L22.2925 33.7896C21.9653 34.1168 21.7815 34.5606 21.7815 35.0234C21.7815 35.4861 21.9653 35.9299 22.2925 36.2571C22.6198 36.5843 23.0635 36.7681 23.5263 36.7681C23.989 36.7681 24.4328 36.5843 24.76 36.2571L32.7925 28.2246C32.9548 28.0627 33.0835 27.8704 33.1713 27.6587C33.2591 27.447 33.3043 27.2201 33.3043 26.9909C33.3043 26.7617 33.2591 26.5347 33.1713 26.323C33.0835 26.1113 32.9548 25.919 32.7925 25.7571L24.76 17.7246C24.095 17.0596 22.975 17.0596 22.2925 17.7421Z" fill="white"/>
+                        </svg>
+                    </button>
+                    <button class="button-left btn-swiper">
+                        <svg class="btn-svg left-svg" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle r="27" transform="matrix(-1 0 0 1 27 27)" fill="#FF8A00"/>
+                            <path d="M31.7075 17.7421C31.8697 17.904 31.9984 18.0963 32.0862 18.308C32.174 18.5197 32.2192 18.7467 32.2192 18.9759C32.2192 19.2051 32.174 19.432 32.0862 19.6437C31.9984 19.8554 31.8697 20.0477 31.7075 20.2096L24.9175 26.9996L31.7075 33.7896C32.0347 34.1168 32.2185 34.5606 32.2185 35.0234C32.2185 35.4861 32.0347 35.9299 31.7075 36.2571C31.3802 36.5843 30.9365 36.7681 30.4737 36.7681C30.011 36.7681 29.5672 36.5843 29.24 36.2571L21.2075 28.2246C21.0452 28.0627 20.9165 27.8704 20.8287 27.6587C20.7409 27.447 20.6957 27.2201 20.6957 26.9909C20.6957 26.7617 20.7409 26.5347 20.8287 26.323C20.9165 26.1113 21.0452 25.919 21.2075 25.7571L29.24 17.7246C29.905 17.0596 31.025 17.0596 31.7075 17.7421Z" fill="white"/>
+                        </svg>
+                    </button>
+                <!-- </div> -->
             </div>
         </section>
 

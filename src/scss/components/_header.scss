@@ -1,6 +1,11 @@
 .header {
 	padding: 21px 0 15px;
 	background: #FFFFFF;
+	&__btn-close {
+		display: none;
+		border: transparent;
+        background-color: transparent;
+	}
 }
 .header__nav {
 	display: flex;
@@ -24,22 +29,25 @@
 		color: $main-orange;
 	}
 }
-.header__link_double {
+.header__link-double {
+	// display: none;
 	@media(max-width: 768px) {
 		display: block;
 		font-size: 18px;
 		line-height: 24px;
-		padding-left: 38px;
+		padding-left: 34px;
+		margin-left: 19px;
 		background-image: url('../img/header-phone.png');
 		background-repeat: no-repeat;
 		background-size: contain;
 		font-weight: 500;
 		font-family: "Helvetica Neue Cyr-Medium";
 	}
-	@media(max-width: 320px) {
+	@media(max-width: 480px) {
 		font-size: 14px;
 		line-height: 20px;
 		padding-left: 31px;
+		margin-left: 10px;
 	}
 }
 .header__button {

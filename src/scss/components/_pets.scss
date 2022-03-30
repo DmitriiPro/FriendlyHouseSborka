@@ -10,6 +10,9 @@
 	@media(max-width: 480px) {
 		padding: 40px 0 20px 0;
 	}
+	// &__container {
+	// 	position: relative;
+	// }
 
 	&__title {
 		font-family: "Comfortaa";
@@ -51,13 +54,17 @@
 				row-gap: 62px;
 		}
 		@media(max-width: 768px) {
-			display: unset;
+			display: flex;
 		}
 	}
 
 	&__item {
 		@media(max-width: 768px) {
-			max-width: 700px;
+			// display: flex;
+			// justify-content: center;
+			// margin: 0 auto;
+			width: 540px;
+			
 		}
 		
 		&_one {
@@ -184,6 +191,10 @@
 	}
 
 	&__figure {
+		@media(max-width: 768px) {
+			// max-width: 540px;
+			margin: 0 auto;
+		}
 		
 		&_one {
 			max-width: 480px;
@@ -205,6 +216,7 @@
 			}
 			@media(max-width: 768px) {
 				max-width: 459px;
+				// max-width: 540px;
 			}
 		}
 
@@ -216,6 +228,7 @@
 			}
 			@media(max-width: 768px) {
 				max-width: 280px;
+				// max-width: 540px;
 			}
 		}
 
@@ -227,6 +240,7 @@
 			}
 			@media(max-width: 768px) {
 				max-width: 394px;
+				// max-width: 540px;
 			}
 		}
 
@@ -238,6 +252,7 @@
 			}
 			@media(max-width: 768px) {
 				max-width: 295px;
+				// max-width: 540px;
 			}
 		}
 
@@ -249,6 +264,7 @@
 			}
 			@media(max-width: 768px) {
 				max-width: 237px;
+				// max-width: 540px;
 			}
 		}
 	}
@@ -268,7 +284,7 @@
 		}
 	}
 }
-.swiper3 {
+.swiper {
     @media (max-width: 768px) {
         // position: relative;
         // margin: 0 auto;
@@ -282,14 +298,85 @@
         // }
     }
 }
-.swiper-button-right,
-.swiper-button-left {
+.swiper-slide {
+	@media(max-width: 768px) {
+		// max-width: 540px;
+	}
+}
+.slider-container {
+	position: relative;
+	@media(max-width: 768px) {
+		max-width: 700px;
+		margin: 0 auto;
+	}
+	@media(max-width: 320px) {
+		max-width: 270px;
+		// height: 214px;
+	}
+}
+.btn-swiper {
+	background-color: transparent;
+	border: transparent;
+	width: 54px;
+	height: 54px;
+	z-index: 6;
+	position: absolute;
+	@media(max-width: 720px) {
+		width: 36px;
+		height: 36px;
+	}
+	@media(max-width: 480px) {
+		width: 26px;
+		height: 26px;
+	} 
+}
+.button-left {
+	display: none;
+	// width: 54px;
+	// height: 54px;
+	
+		@media(max-width: 768px) {
+			display: block;
+			
+			
+			// left: calc(50% - 27);
+			// top: calc(50% - 27);
+			// z-index: 5;
+			top: calc(50% - 27px);
+			left: 0;
+		}
+		@media(max-width: 720px) {
+			top: calc(50% - 18px);
+		}
+		@media(max-width: 480px) {
+			top: calc(50% - 13px);
+		}
+	
+}
+.button-right {
 	display: none;
 	// width: 54px;
 	// height: 54px;
 	@media(max-width: 768px) {
-		// display: flex;
-		// justify-content: space-evenly;
 		display: block;
+		top: calc(50% - 27px);
+		right: 0;
+
+	}
+	@media(max-width: 720px) {
+		top: calc(50% - 18px);
+	}
+	@media(max-width: 480px) {
+		top: calc(50% - 13px);
+	}
+}
+.btn-svg {
+	@media(max-width: 720px) {
+		width: 36px;
+		height: 36px;
+	}
+	@media(max-width: 480px) {
+		width: 26px;
+		height: 26px;
 	}
 }

@@ -146,43 +146,34 @@ const maskTwo = () => {
 };
 maskTwo();
 
-// const swiperFree = () => {
-    
-	// const swiper = new Swiper('.swiper3', 
-    // {
-	// 	// slidePerView: 0,
-	// 	// loop: true,
-	// 	// navigation: {
-	// 	// nextEl: '.swiper-button-right',
-	// 	// prevEl: '.swiper-button-left',
-	// 	// },
-
-	// 	// mousewheel: true,
-	// 	// keyboard: true,
 
 
-	// 	breakpoints: {
-	// 		// when window width is >= 320px
-	// 		320: {
-	// 			slidesPerView: 1,
-	// 			spaceBetween: 5
-	// 		},
-	// 		// when window width is >= 480px
-	// 		768: {
-	// 			slidesPerView: 1,
-	// 			spaceBetween: 5,
-    //             navigation: {
-    //                 nextEl: '.swiper-button-right',
-    //                 prevEl: '.swiper-button-left',
-    //                 }
-	// 		},
-	// 		// when window width is >= 640px
-	// 		// 1024: {
-	// 		// 	slidesPerView: 1,
-	// 		// 	spaceBetween: 5
-	// 		// }
-	// 	}
-	// });
+const pets = () => {
+    const swiper = new Swiper('.swiper', {
+        slidePerView: 1,
+		loop: true,
+        // autoHeight: true,
+        // slidesPerView: 1,
+        // centeredSlides: true,
+        // centerInsufficientSlides: true,
+        navigation: {
+            nextEl: '.button-right',
+            prevEl: '.button-left',
+        },
+        mousewheel: true,
+		keyboard: true,
+    });  
+};
 
-// };
-// swiperFree();
+const reload = () => {
+    // const initSlider1 = document.querySelector('.swiper');
+    // if ( window.screen.width > 768) location.reload();
+};
+
+window.addEventListener('DOMContentLoaded', () => {
+    if (window.screen.width <= 768) pets();
+});
+
+window.addEventListener('resize', () => {
+    if (window.screen.width <= 768) pets();
+});

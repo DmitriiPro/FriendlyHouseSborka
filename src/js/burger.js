@@ -1,13 +1,41 @@
 const burger = () => {
     const burgerBtn = $('.burg-btn');
     const modalBurger = $('.burger-menu');
+    // const toggleImg = $('.header__menu-img');
+    const closeImg = $('.header__btn-close');
 
     burgerBtn.on('click', function() {  // открывает окно и закрывает
         modalBurger.fadeToggle(500);
+        if(window.screen.width <= 480) {
+            burgerBtn.hide();
+            closeImg.show();
+            // closeImg.show();
+            // burgerBtn.hide();
+        } else if(window.screen.width > 479) {
+            burgerBtn.show();
+            closeImg.hide();
+        }
     });
+    closeImg.on('click', function() {
+        // modalBurger.fadeToggle(500);
+        if(window.screen.width <= 480) {
+            closeImg.hide();
+            burgerBtn.show();
+            
+        } 
+        // else if(window.screen.width > 479) {
+        //     closeImg.show();
+        //     burgerBtn.hide();
+        // }
+    })
 
     $('.burger__link').on('click', function() {
         modalBurger.hide();
+        if(window.screen.width <= 480) {
+            burgerBtn.show();
+            closeImg.hide();
+          
+        } 
     }); // при клике по ссылке закрывается бургер меню
 
     // burgerBtn.on('click', function() {  // открывает окно и закрывает

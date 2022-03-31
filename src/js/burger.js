@@ -38,12 +38,7 @@ const burger = () => {
         } 
     }); // при клике по ссылке закрывается бургер меню
 
-    // burgerBtn.on('click', function() {  // открывает окно и закрывает
-    //     modalBurger.show(500);
-    // });
-    // burgerBtn.on('click', function() {  // открывает окно и закрывает
-    //     modalBurger.hide(500);
-    // });
+   
 
     
     $(document).mouseup(function(e) {  // при нажатии не на кнопку закрывает бургер

@@ -21,7 +21,7 @@
 		top: 0;
 		left: 15px;
 	}
-	@media(max-width: 640px) {
+	@media(max-width: 680px) {
 		max-width: 469px;
 	}
 }
@@ -37,7 +37,7 @@
 	font-weight: 300;
 	font-size: 40px;
 	line-height: 60px;
-	max-width: 410px;
+	max-width: 450px;
 	z-index: 10;
 }
 .sara__title-orange {
@@ -61,8 +61,6 @@
 	align-self: flex-end;
 }
 .wrapper-dog {
-	&::after {
-		content: "";
 		background-image: url('../img/sara-dog.png');
 		background-image: -webkit-image-set(
 			url('../img/sara-dog.avif') 1x,
@@ -76,12 +74,13 @@
 		);
 		background-repeat:no-repeat;
 		background-position: center;
+		background-size: cover;
 		width: 580px;
 		height: 580px;
 		position: absolute;
 		top: 0;
 		right: 300px;
-		@media (max-width: 1090px) {
+		@media (max-width: 1180px) {
 			background-image: url('../img/sara-dog@1024.png');
 			background-image: -webkit-image-set(
 				url('../img/sara-dog@1024.avif') 1x,
@@ -96,9 +95,10 @@
 			width: 416px;
 			height: 416px;
 			top: 67px;
+			right: 294px;
 			background-position: bottom center;
+			background-size: cover;
 		}
-	}
 }
 .wrapper-name-animals {
 	margin-right: 100px;
@@ -137,7 +137,7 @@
 	@media(max-width: 768px) {
 		margin-top: 201px;
 	}
-	@media(max-width: 640px) {
+	@media(max-width: 680px) {
 		margin-top: 0;
 	}
 }
@@ -536,7 +536,7 @@
 	.sara__title {
 		font-size: 30px;
 		line-height: 44px;
-		max-width: 300px;
+		max-width: 320px;
 		height: 182px;
 	}
 	.wrapper-text {
@@ -557,11 +557,10 @@
 		background-image: url(../img/lapa-1024.png);
 	}
 	.wrapper-dog {
-		&::after {
 			background-position: center;
 			top: 14px;
 			right: 232px;
-		}
+			right: 204px;
 	}
 }
 @media (max-width: 820px) {
@@ -599,13 +598,11 @@
 		height: 120px;
 	}
 	.wrapper-dog {
-		&::after {
 			width: 420px;
 			height: 416px;
-			right: 140px;
+			right: 166px;
 			top: 75px;
 			background-position: center;
-		}
 	}
 }
 
@@ -619,8 +616,13 @@
 		height: unset;
 		display: inline;
 	}
+
+	.wrapper-dog {
+		top: 88px;
+		right: 165px;
+	}
 }
-@media (max-width: 640px) {
+@media (max-width: 680px) {
 	.sara__item:not(:last-child){
 		margin-bottom: 0;
 	}
@@ -645,9 +647,11 @@
 	.wrapper-name-animals {
 		padding-top: 0;
 	}
-	.wrapper-dog::after {
-		right: 105px;
+	.wrapper-dog {
+		right: 130px;
+		top: 80px;
 	}
+	
 	.btn-animals {
 		width: 60px;
 		height: 96px;
@@ -664,7 +668,7 @@
 		align-self: center;
 	}
 }
-@media (max-width: 460px) {
+@media (max-width: 570px) {
 	.sara {
 		padding: 15px 0 40px 0;
 	}
@@ -700,7 +704,6 @@
 		background-position: center top;
 	}
 	.wrapper-dog {
-		&::after {
 			background-image: url('../img/sara-dog@320.png');
 			background-image: -webkit-image-set(
 				url('../img/sara-dog@320.avif') 1x,
@@ -714,18 +717,19 @@
 			);
 			width: 270px;
 			height: 266px;
-			right: 60px;
+			right: 115px;
 			top: 79px;
 			background-position: center;
-		}
+	}
+}
+@media(max-width: 400px) {
+	.wrapper-dog {
+		right: 50px;
 	}
 }
 @media (max-width: 320px) {
-	
 	.wrapper-dog {
-		&::after {
 			right: 26px;
 			background-position: center;
-		}
 	}
 }

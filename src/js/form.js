@@ -1,3 +1,4 @@
+// форма отправки ajax
 const form = () => {
     const formSubtitle = $('.form__subtitle'); // нашли заголовок в форме
     const modalForm = document.querySelector('.form__form-input'); 
@@ -41,42 +42,7 @@ const form = () => {
 
 form();
 
-// const swiper = () => {
-//     const swiper = new Swiper('.swiper1', {
-//         // Optional parameters
-//         direction: 'vertical',
-//         loop: true,
-      
-//         // If we need pagination
-//         pagination: {
-//           el: '.swiper-pagination',
-//         },
-      
-//         // Navigation arrows
-//         navigation: {
-//           nextEl: '.swiper-button-next',
-//           prevEl: '.swiper-button-prev',
-//         },
-      
-//         // And if we need scrollbar
-//         scrollbar: {
-//           el: '.swiper-scrollbar',
-//         },
-//       });
-//     const sliderAll = () => {
-//         const swiper1 = new Swiper('.swiper1', {
-//             slidesPerView: 1,
-//         });  
-        
-//         const swiper2 = new Swiper('.swiper2', {
-//             slidesPerView: 1,
-//         });  
-//     };
-    
-
-// }
-// swiper();
-
+// яндекс карта
 const maps = () => {
 
     ymaps.ready(init);
@@ -132,6 +98,7 @@ const scroll = () => {
 };
 scroll();
 
+// маска на инпут телефон
 const maskOne = () => {
     const inputMaskTel = document.querySelector('.form-field__maska'); // нашел сам инпут телефон другой класс
     const telMask = new Inputmask('+7 (999)-999-99-99'); // на инпут сделал маску для номера 
@@ -147,15 +114,11 @@ const maskTwo = () => {
 maskTwo();
 
 
-
+// слайдер
 const pets = () => {
     const swiper = new Swiper('.swiper', {
         slidePerView: 1,
 		loop: true,
-        // autoHeight: true,
-        // slidesPerView: 1,
-        // centeredSlides: true,
-        // centerInsufficientSlides: true,
         navigation: {
             nextEl: '.button-right',
             prevEl: '.button-left',
@@ -165,11 +128,6 @@ const pets = () => {
     });  
 };
 
-const reload = () => {
-    // const initSlider1 = document.querySelector('.swiper');
-    // if ( window.screen.width > 768) location.reload();
-};
-
 window.addEventListener('DOMContentLoaded', () => {
     if (window.screen.width <= 768) pets();
 });
@@ -177,3 +135,54 @@ window.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('resize', () => {
     if (window.screen.width <= 768) pets();
 });
+
+
+
+// табы зверьков
+
+const saraList = document.querySelector('.sara__list'); 
+let orderNum = 0;    
+
+const saraItem = () => {
+    const saraItem = document.querySelectorAll('.sara__item');
+    let arr = '';
+
+    saraItem.forEach(item => {
+        if (item.classList.contains('sara__active')) {
+            arr = item;
+        }
+    });
+
+    if (arr !== '') {
+        return arr;
+    }
+
+    return;
+};
+
+
+const clickFull = (item) => {
+    
+    const li = saraItem(),
+        saraWrapper = document.querySelector('.wrapper-dog'),
+        textSpan = item.querySelector('span').textContent,
+        full = item.dataset.full,
+        saraTitleName= document.querySelector('.sara__title-name');
+
+    if (saraItem() !== undefined) {
+        orderNum += 1;
+        li.style.order = `${orderNum}`;
+        li.classList.remove('sara__active');
+    } 
+    item.classList.add('sara__active');
+    saraTitleName.textContent =  textSpan;
+    saraWrapper.style.backgroundImage = `url('${full}')`;
+};
+
+saraList.addEventListener('click', (event) => {
+    let target = event.target;
+
+    if (target.closest('.sara__item')) clickFull(target.closest('.sara__item'));    
+
+});
+

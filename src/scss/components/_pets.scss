@@ -10,10 +10,7 @@
 	@media(max-width: 480px) {
 		padding: 40px 0 20px 0;
 	}
-	// &__container {
-	// 	position: relative;
-	// }
-
+	
 	&__title {
 		font-family: "Comfortaa";
 		font-weight: 400;
@@ -60,9 +57,6 @@
 
 	&__item {
 		@media(max-width: 768px) {
-			// display: flex;
-			// justify-content: center;
-			// margin: 0 auto;
 			width: 540px;
 			
 		}
@@ -284,25 +278,25 @@
 		}
 	}
 }
-.swiper {
-    @media (max-width: 768px) {
-        // position: relative;
-        // margin: 0 auto;
-        // overflow: hidden;
-        // max-width: 700px;
-        // height: 410px;
-        // @media (max-width: 730px) {
-        //     max-width: 296px;
-        //     height: 214px;
-        //     padding-left: 12px;
-        // }
-    }
-}
-.swiper-slide {
-	@media(max-width: 768px) {
-		// max-width: 540px;
-	}
-}
+// .swiper {
+//     @media (max-width: 768px) {
+//         // position: relative;
+//         // margin: 0 auto;
+//         // overflow: hidden;
+//         // max-width: 700px;
+//         // height: 410px;
+//         // @media (max-width: 730px) {
+//         //     max-width: 296px;
+//         //     height: 214px;
+//         //     padding-left: 12px;
+//         // }
+//     }
+// }
+// .swiper-slide {
+// 	@media(max-width: 768px) {
+// 		// max-width: 540px;
+// 	}
+// }
 .slider-container {
 	position: relative;
 	@media(max-width: 768px) {
@@ -332,16 +326,9 @@
 }
 .button-left {
 	display: none;
-	// width: 54px;
-	// height: 54px;
 	
 		@media(max-width: 768px) {
 			display: block;
-			
-			
-			// left: calc(50% - 27);
-			// top: calc(50% - 27);
-			// z-index: 5;
 			top: calc(50% - 27px);
 			left: 0;
 		}
@@ -355,8 +342,6 @@
 }
 .button-right {
 	display: none;
-	// width: 54px;
-	// height: 54px;
 	@media(max-width: 768px) {
 		display: block;
 		top: calc(50% - 27px);

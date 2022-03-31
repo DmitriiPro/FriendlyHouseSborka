@@ -105,7 +105,7 @@ export const img = () => gulp
 export const webp = () => gulp
 	.src('src/img/**/*.{jpg,jpeg,png}')
 	.pipe(gulpWebp({
-		quality: 70
+		quality: 60
 	}))
 	.pipe(gulp.dest('dist/img'))
 	.pipe(browserSync.stream({
@@ -115,7 +115,7 @@ export const webp = () => gulp
 export const avif = () => gulp
 	.src('src/img/**/*.{jpg,jpeg,png}')
 	.pipe(gulpAvif({
-		quality: 70
+		quality: 60
 	}))
 	.pipe(gulp.dest('dist/img'))
 	.pipe(browserSync.stream({

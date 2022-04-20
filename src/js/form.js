@@ -1,3 +1,4 @@
+
 // форма отправки ajax
 const form = () => {
     const formSubtitle = $('.form__subtitle'); // нашли заголовок в форме

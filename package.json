@@ -8,8 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "browserslist": [
-    "cover 99.5%",
-    "not IE 11"
+    "cover 99.5%"
+    
   ],
   "author": "Dmitrii",
   "license": "ISC",
